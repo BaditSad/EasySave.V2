@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="75983268-lisse-dégradé-élégant-fond-violet-bien-en-utilisant-comme-conception-.webp" />
+    <None Remove="Background.png" />
+    <None Remove="Background_1.png" />
+    <None Remove="close white.png" />
+    <None Remove="close.png" />
+    <None Remove="EasySave-28-11-2022.png" />
+    <None Remove="Engrenage.png" />
+    <None Remove="france.png" />
+    <None Remove="minim white.png" />
+    <None Remove="minimize white.png" />
+    <None Remove="minimize.png" />
+    <None Remove="united-kingdom.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="75983268-lisse-dégradé-élégant-fond-violet-bien-en-utilisant-comme-conception-.webp" />
+    <Resource Include="Background.png" />
+    <Resource Include="Background_1.png" />
+    <Resource Include="close white.png" />
+    <Resource Include="close.png" />
+    <Resource Include="EasySave-28-11-2022.png" />
+    <Resource Include="Engrenage.png" />
+    <Resource Include="france.png" />
+    <Resource Include="minim white.png" />
+    <Resource Include="minimize white.png" />
+    <Resource Include="minimize.png" />
+    <Resource Include="united-kingdom.png" />
+  </ItemGroup>
+
+</Project>
