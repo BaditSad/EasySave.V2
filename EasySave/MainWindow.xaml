@@ -34,24 +34,24 @@
     </Window.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush x:Name="Background_image" ImageSource="/Background_1.png"/>
+            <ImageBrush x:Name="Background_image" ImageSource="/pictures/Background_1.png"/>
         </Grid.Background>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="86,181,0,0" VerticalAlignment="Top" Height="92" Width="263" Click="Create_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/CREATE_SAVE.png"/>
+                <ImageBrush ImageSource="/pictures/CREATE_SAVE.png"/>
             </Button.Background>
         </Button>
         <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="349,0,0,0" VerticalAlignment="Center" Height="96" Width="254" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/SHOW_SAVES.png"/>
+                <ImageBrush ImageSource="/pictures/SHOW_SAVES.png"/>
             </Button.Background>
         </Button>
         <Label Content="EasySave © 2022 - 2023 / Brieuc.D - Arthur.K - Weicheng.L - Jean-Loup.D (CESI Lille - Groupe 2)" HorizontalAlignment="Left" Margin="86,341,0,0" VerticalAlignment="Top" Width="580" Foreground="White"/>
-        <Image Source="/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="147" Margin="130,43,0,0" VerticalAlignment="Top" Width="426"/>
+        <Image Source="/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="147" Margin="130,43,0,0" VerticalAlignment="Top" Width="426"/>
         <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
         <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/close white.png"/>
+                <ImageBrush ImageSource="/pictures/close white.png"/>
             </Button.Background>
             <Button.Foreground>
                 <ImageBrush/>
@@ -59,17 +59,17 @@
         </Button>
         <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="French_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/france.png"/>
+                <ImageBrush ImageSource="/pictures/france.png"/>
             </Button.Background>
         </Button>
         <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="51,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="English_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/united-kingdom.png"/>
+                <ImageBrush ImageSource="/pictures/united-kingdom.png"/>
             </Button.Background>
         </Button>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="611,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Minimize_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/minim white.png"/>
+                <ImageBrush ImageSource="/pictures/minim white.png"/>
             </Button.Background>
             <Button.Foreground>
                 <ImageBrush/>
@@ -77,7 +77,7 @@
         </Button>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Center" Width="50" Height="52" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/gear.png"/>
+                <ImageBrush ImageSource="/pictures/gear.png"/>
             </Button.Background>
         </Button>
 
