@@ -46,7 +46,7 @@
                 <ImageBrush ImageSource="/pictures/SHOW_SAVES.png"/>
             </Button.Background>
         </Button>
-        <Label Content="EasySave © 2022 - 2023 / Brieuc.D - Arthur.K - Weicheng.L - Jean-Loup.D (CESI Lille - Groupe 2)" HorizontalAlignment="Left" Margin="86,341,0,0" VerticalAlignment="Top" Width="580" Foreground="White"/>
+        <Label Content="EasySave © 2022 - 2023 / Brieuc.D - Arthur.K - Weicheng.L - Jean-Loup.D (CESI Lille - Groupe 2)" Margin="86,341,197,0" VerticalAlignment="Top" Foreground="White"/>
         <Image Source="/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="147" Margin="130,43,0,0" VerticalAlignment="Top" Width="426"/>
         <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
         <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
