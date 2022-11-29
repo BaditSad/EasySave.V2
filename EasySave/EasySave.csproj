@@ -13,12 +13,16 @@
     <None Remove="Background_1.png" />
     <None Remove="close white.png" />
     <None Remove="close.png" />
+    <None Remove="CREATE SAVE.png" />
+    <None Remove="CREATE_SAVE.png" />
     <None Remove="EasySave-28-11-2022.png" />
     <None Remove="Engrenage.png" />
     <None Remove="france.png" />
+    <None Remove="gear.png" />
     <None Remove="minim white.png" />
     <None Remove="minimize white.png" />
     <None Remove="minimize.png" />
+    <None Remove="SHOW_SAVES.png" />
     <None Remove="united-kingdom.png" />
   </ItemGroup>
 
@@ -28,12 +32,16 @@
     <Resource Include="Background_1.png" />
     <Resource Include="close white.png" />
     <Resource Include="close.png" />
+    <Resource Include="CREATE SAVE.png" />
+    <Resource Include="CREATE_SAVE.png" />
     <Resource Include="EasySave-28-11-2022.png" />
     <Resource Include="Engrenage.png" />
     <Resource Include="france.png" />
+    <Resource Include="gear.png" />
     <Resource Include="minim white.png" />
     <Resource Include="minimize white.png" />
     <Resource Include="minimize.png" />
+    <Resource Include="SHOW_SAVES.png" />
     <Resource Include="united-kingdom.png" />
   </ItemGroup>
 
