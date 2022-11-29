@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="75983268-lisse-dégradé-élégant-fond-violet-bien-en-utilisant-comme-conception-.webp" />
     <None Remove="Background.png" />
     <None Remove="Background_1.png" />
     <None Remove="close white.png" />
@@ -27,22 +26,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="75983268-lisse-dégradé-élégant-fond-violet-bien-en-utilisant-comme-conception-.webp" />
-    <Resource Include="Background.png" />
-    <Resource Include="Background_1.png" />
-    <Resource Include="close white.png" />
-    <Resource Include="close.png" />
-    <Resource Include="CREATE SAVE.png" />
-    <Resource Include="CREATE_SAVE.png" />
-    <Resource Include="EasySave-28-11-2022.png" />
-    <Resource Include="Engrenage.png" />
-    <Resource Include="france.png" />
-    <Resource Include="gear.png" />
-    <Resource Include="minim white.png" />
-    <Resource Include="minimize white.png" />
-    <Resource Include="minimize.png" />
-    <Resource Include="SHOW_SAVES.png" />
-    <Resource Include="united-kingdom.png" />
+    <Resource Include="pictures\Background.png" />
+    <Resource Include="pictures\Background_1.png" />
+    <Resource Include="pictures\close white.png" />
+    <Resource Include="pictures\close.png" />
+    <Resource Include="pictures\CREATE SAVE.png" />
+    <Resource Include="pictures\CREATE_SAVE.png" />
+    <Resource Include="pictures\EasySave-28-11-2022.png" />
+    <Resource Include="pictures\Engrenage.png" />
+    <Resource Include="pictures\france.png" />
+    <Resource Include="pictures\gear.png" />
+    <Resource Include="pictures\minim white.png" />
+    <Resource Include="pictures\minimize white.png" />
+    <Resource Include="pictures\minimize.png" />
+    <Resource Include="pictures\SHOW_SAVES.png" />
+    <Resource Include="pictures\united-kingdom.png" />
   </ItemGroup>
 
 </Project>
