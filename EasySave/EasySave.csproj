@@ -12,6 +12,7 @@
     <None Remove="Background_1.png" />
     <None Remove="close white.png" />
     <None Remove="close.png" />
+    <None Remove="CMD.png" />
     <None Remove="CREATE SAVE.png" />
     <None Remove="CREATE_SAVE.png" />
     <None Remove="EasySave-28-11-2022.png" />
@@ -26,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="CMD.png" />
     <Resource Include="pictures\Background.png" />
     <Resource Include="pictures\Background_1.png" />
     <Resource Include="pictures\close white.png" />

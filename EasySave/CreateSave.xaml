@@ -1,0 +1,75 @@
+﻿<Window x:Class="EasySave.CreateSave"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasySave"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize" >
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="Beige"></SolidColorBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style x:Key="defaultButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="BlueViolet"></Setter>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Background" Value="Yellow" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush x:Name="Background_image" ImageSource="/pictures/Background_1.png"/>
+        </Grid.Background>
+        <Label Content="EasySave © 2022 - 2023 / Brieuc.D - Arthur.K - Weicheng.L - Jean-Loup.D (CESI Lille - Groupe 2)" Margin="86,341,197,0" VerticalAlignment="Top" Foreground="White"/>
+        <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
+        <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/close white.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+        </Button>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="French_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/france.png"/>
+            </Button.Background>
+        </Button>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="51,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="English_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/united-kingdom.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="611,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Minimize_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/minim white.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+        </Button>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Center" Width="50" Height="52" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/gear.png"/>
+            </Button.Background>
+        </Button>
+        <Image Source="/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="51" Margin="520,279,0,0" VerticalAlignment="Top" Width="152"/>
+
+    </Grid>
+</Window>
