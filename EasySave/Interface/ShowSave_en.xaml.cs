@@ -10,18 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Drawing;
 
 namespace EasySave
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour ShowSave.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ShowSave_en : Window
     {
-        public MainWindow()
+        public ShowSave_en()
         {
             InitializeComponent();
         }
@@ -32,46 +30,37 @@ namespace EasySave
         {
             this.DragMove();
         }
-
-        private void Create_Click(object sender, RoutedEventArgs e)
-        {
-            CreateSave window = new CreateSave();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-            window.Show();
-        }
-
-        private void Show_Click(object sender, RoutedEventArgs e)
-        {
-            ShowSave window = new ShowSave();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-            window.Show();
-        }
-
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
-
-        private void French_Click(object sender, RoutedEventArgs e)
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow_en window = new MainWindow_en();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
-
+            //Nothing
+        }
+        private void French_Click(object sender, RoutedEventArgs e)
+        {
+            ShowSave_fr window = new ShowSave_fr();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {
-            Config window = new Config();
+            Config_en window = new Config_en();
             window.Top = this.Top + 100;
             window.Left = this.Left + 250;
             window.Show();

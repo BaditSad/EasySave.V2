@@ -1,0 +1,138 @@
+﻿<Window x:Class="EasySave.CreateSave_fr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasySave"
+        mc:Ignorable="d"
+        Title="CreateSave_fr" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize" >
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="Beige"></SolidColorBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style x:Key="defaultButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="BlueViolet"></Setter>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Background" Value="Yellow" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush x:Name="Background_image" ImageSource="/Interface/pictures/Background_1.png"/>
+        </Grid.Background>
+        <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
+        <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/close white.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+        </Button>
+        <Button Opacity="0.3" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="French_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/france.png"/>
+            </Button.Background>
+        </Button>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="51,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="English_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/united-kingdom.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="611,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Minimize_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/minim white.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+        </Button>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="24" Click="Home_Click" Height="23">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/homepage.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="700,214,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Config_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/gear.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="238" Margin="51,66,0,0" VerticalAlignment="Top" Width="272" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="238" Margin="366,66,0,0" VerticalAlignment="Top" Width="272" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="61,96,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="61,180,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="377,96,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="377,180,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Label Content="Sélectionner un dossier :" HorizontalAlignment="Left" Margin="61,96,0,0" VerticalAlignment="Top" Width="189" Foreground="White"/>
+        <Label Content="Sélectionner le chemin cible :" HorizontalAlignment="Left" Margin="61,180,0,0" VerticalAlignment="Top" Width="174" Foreground="White"/>
+        <Label Content="Sélectionner un fichier :" HorizontalAlignment="Left" Margin="377,96,0,0" VerticalAlignment="Top" Width="152" Foreground="White"/>
+        <Label Content="Sélectionner le chemin cible :" HorizontalAlignment="Left" Margin="377,180,0,0" VerticalAlignment="Top" Width="174" Foreground="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="271,181,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="271,97,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>
+        <Button Content="..." Click="TargetFolderFiles" HorizontalAlignment="Left" Margin="273,183,0,0" VerticalAlignment="Top" Width="23" Style="{StaticResource defaultButtonStyle}" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+        <Button Content="..." Click="SourceFolderFiles"  HorizontalAlignment="Left" Margin="273,99,0,0" VerticalAlignment="Top" Width="23" Style="{StaticResource defaultButtonStyle}" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="588,97,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="588,181,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>
+        <Button Content="..." Click="TargetFolderFile" HorizontalAlignment="Left" Margin="590,183,0,0" VerticalAlignment="Top" Width="23" Style="{StaticResource defaultButtonStyle}" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+
+        <Button Content="..." Click="SourceFolderFile" HorizontalAlignment="Left" Margin="590,99,0,0" VerticalAlignment="Top" Width="23" Style="{StaticResource defaultButtonStyle}" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+
+        <Button Content="..." Click="SaveFiles" HorizontalAlignment="Left" Margin="62,255,0,0" VerticalAlignment="Top" Width="124" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/SAUVEGARDER.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Click="ClearFiles" HorizontalAlignment="Left" Margin="189,255,0,0" VerticalAlignment="Top" Width="123" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/NETTOYER.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.8" HorizontalAlignment="Left" Height="238" Margin="343,66,0,0" VerticalAlignment="Top" Width="4" Fill="#FFFBD930">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE41B7F"/>
+                    <GradientStop Color="#FFFC3226" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Button Content="" Click="SaveFile" HorizontalAlignment="Left" Margin="381,255,0,0" VerticalAlignment="Top" Width="124" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/SAUVEGARDER.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Click="ClearFile" HorizontalAlignment="Left" Margin="508,255,0,0" VerticalAlignment="Top" Width="123" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/NETTOYER.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,0,0,0" VerticalAlignment="Center" Width="237" Fill="#FF3762CC"/>
+        <TextBox HorizontalAlignment="Left" Margin="74,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="Black" MaxHeight="17.96"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,127,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="28" Margin="384,0,0,0" VerticalAlignment="Center" Width="237" Fill="#FF3762CC"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="384,127,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
+        <TextBox HorizontalAlignment="Left" Margin="76,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="Black" MaxHeight="17.96"/>
+        <TextBox HorizontalAlignment="Left" Margin="392,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="Black" MaxHeight="17.96"/>
+        <TextBox HorizontalAlignment="Left" Margin="392,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB6BECE" Foreground="Black" MaxHeight="17.96"/>
+        <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
+        <Image Source="/Interface/pictures/SAUVEGARDE_FICHIERS.png" HorizontalAlignment="Left" Height="58" Margin="43,47,0,0" VerticalAlignment="Top" Width="272"/>
+        <Image Source="/Interface/pictures/SAUVEGARDE_FICHIER.png" HorizontalAlignment="Left" Height="53" Margin="355,48,0,0" VerticalAlignment="Top" Width="277"/>
+
+
+    </Grid>
+</Window>

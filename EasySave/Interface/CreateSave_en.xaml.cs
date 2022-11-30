@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace EasySave
 {
     /// <summary>
-    /// Logique d'interaction pour ShowSave.xaml
+    /// Logique d'interaction pour CreateSave.xaml
     /// </summary>
-    public partial class ShowSave : Window
+    public partial class CreateSave_en : Window
     {
-        public ShowSave()
+        public CreateSave_en()
         {
             InitializeComponent();
         }
@@ -40,7 +40,15 @@ namespace EasySave
         }
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow();
+            MainWindow_en window = new MainWindow_en();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
+        }
+        private void French_Click(object sender, RoutedEventArgs e)
+        {
+            CreateSave_fr window = new CreateSave_fr();
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
@@ -48,15 +56,43 @@ namespace EasySave
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
+            //Nothing
+        }
+        private void SourceFolderFiles(object sender, RoutedEventArgs e)
+        {
 
         }
-        private void French_Click(object sender, RoutedEventArgs e)
+        private void TargetFolderFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SaveFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ClearFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SourceFolderFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void TargetFolderFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SaveFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ClearFile(object sender, RoutedEventArgs e)
         {
 
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {
-            Config window = new Config();
+            Config_en window = new Config_en();
             window.Top = this.Top + 100;
             window.Left = this.Left + 250;
             window.Show();

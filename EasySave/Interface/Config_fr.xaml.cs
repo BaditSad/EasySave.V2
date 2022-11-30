@@ -17,9 +17,9 @@ namespace EasySave
     /// <summary>
     /// Logique d'interaction pour Config.xaml
     /// </summary>
-    public partial class Config : Window
+    public partial class Config_fr : Window
     {
-        public Config()
+        public Config_fr()
         {
             InitializeComponent();
         }

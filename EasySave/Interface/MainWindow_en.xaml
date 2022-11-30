@@ -1,11 +1,11 @@
-﻿<Window x:Class="EasySave.ShowSave"
+﻿<Window x:Class="EasySave.MainWindow_en"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySave"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize" >
+        Title="MainWindow_en" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize" >
     <Window.Background>
         <SolidColorBrush Opacity="0" Color="Beige"></SolidColorBrush>
     </Window.Background>
@@ -36,7 +36,18 @@
         <Grid.Background>
             <ImageBrush x:Name="Background_image" ImageSource="/Interface/pictures/Background_1.png"/>
         </Grid.Background>
-        <Label Content="EasySave © 2022 - 2023 / Brieuc.D - Arthur.K - Weicheng.L - Jean-Loup.D (CESI Lille - Groupe 2)" Margin="86,341,197,0" VerticalAlignment="Top" Foreground="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="96" Margin="73,0,0,0" VerticalAlignment="Center" Width="548" Fill="White"/>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="86,181,0,0" VerticalAlignment="Top" Height="92" Width="272" Click="Create_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/CREATE_SAVE.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="343,0,0,0" VerticalAlignment="Center" Height="96" Width="260" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/SHOW_SAVES.png"/>
+            </Button.Background>
+        </Button>
+        <Image Source="/Interface/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="147" Margin="177,42,0,0" VerticalAlignment="Top" Width="426"/>
         <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
         <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
             <Button.Background>
@@ -51,7 +62,7 @@
                 <ImageBrush ImageSource="/Interface/pictures/france.png"/>
             </Button.Background>
         </Button>
-        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="51,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="English_Click" Height="20">
+        <Button Opacity="0.3" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="51,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="English_Click" Height="20">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/united-kingdom.png"/>
             </Button.Background>
@@ -64,21 +75,18 @@
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="272" Margin="26,45,0,0" VerticalAlignment="Top" Width="630">
-            <Rectangle.Fill>
-                <ImageBrush  ImageSource="/Interface/pictures/CMD.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Image Source="/Interface/pictures/LOG_TERMINAL.png" HorizontalAlignment="Left" Height="44" Margin="511,283,0,0" VerticalAlignment="Top" Width="152"/>
-        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="24" Click="Home_Click" Height="23">
-            <Button.Background>
-                <ImageBrush ImageSource="/Interface/pictures/homepage.png"/>
-            </Button.Background>
-        </Button>
+        <Image Source="/Interface/pictures/eclair.png" HorizontalAlignment="Left" Height="100" Margin="115,52,0,0" VerticalAlignment="Top" Width="109"/>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="700,214,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Config_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/gear.png"/>
             </Button.Background>
         </Button>
+        <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="76,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Info_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/info.png"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>

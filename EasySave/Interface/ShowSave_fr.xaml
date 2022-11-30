@@ -1,11 +1,11 @@
-﻿<Window x:Class="EasySave.MainWindow"
+﻿<Window x:Class="EasySave.ShowSave_fr"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySave"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize" >
+        Title="ShowSave_fr" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize" >
     <Window.Background>
         <SolidColorBrush Opacity="0" Color="Beige"></SolidColorBrush>
     </Window.Background>
@@ -36,18 +36,6 @@
         <Grid.Background>
             <ImageBrush x:Name="Background_image" ImageSource="/Interface/pictures/Background_1.png"/>
         </Grid.Background>
-        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="86,181,0,0" VerticalAlignment="Top" Height="92" Width="263" Click="Create_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/Interface/pictures/CREATE_SAVE.png"/>
-            </Button.Background>
-        </Button>
-        <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="349,0,0,0" VerticalAlignment="Center" Height="96" Width="254" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/Interface/pictures/SHOW_SAVES.png"/>
-            </Button.Background>
-        </Button>
-        <Label Content="EasySave © 2022 - 2023 / Brieuc.D - Arthur.K - Weicheng.L - Jean-Loup.D (CESI Lille - Groupe 2)" Margin="86,341,197,0" VerticalAlignment="Top" Foreground="White"/>
-        <Image Source="/Interface/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="147" Margin="177,42,0,0" VerticalAlignment="Top" Width="426"/>
         <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
         <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
             <Button.Background>
@@ -57,7 +45,7 @@
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="French_Click" Height="20">
+        <Button Opacity="0.3" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="French_Click" Height="20">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/france.png"/>
             </Button.Background>
@@ -75,12 +63,41 @@
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Image Source="/Interface/pictures/eclair.png" HorizontalAlignment="Left" Height="100" Margin="115,52,0,0" VerticalAlignment="Top" Width="109"/>
+        <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="272" Margin="26,45,0,0" VerticalAlignment="Top" Width="630">
+            <Rectangle.Fill>
+                <ImageBrush  ImageSource="/Interface/pictures/CMD.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="/Interface/pictures/TERMINAL_LOGS.png" HorizontalAlignment="Left" Height="54" Margin="28,276,0,0" VerticalAlignment="Top" Width="211"/>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="24" Click="Home_Click" Height="23">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/homepage.png"/>
+            </Button.Background>
+        </Button>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="700,214,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Config_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/gear.png"/>
             </Button.Background>
         </Button>
-
+        <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
+        <ScrollBar Opacity="0.9" HorizontalAlignment="Left" Margin="601,70,0,0" VerticalAlignment="Top" Height="222" Width="5" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+            <ScrollBar.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF252525"/>
+                    <GradientStop Color="#FF2B2B2B" Offset="1"/>
+                    <GradientStop Color="#FF838383" Offset="0.517"/>
+                    <GradientStop Color="#FF838383" Offset="0.537"/>
+                </LinearGradientBrush>
+            </ScrollBar.BorderBrush>
+            <ScrollBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ScrollBar.RenderTransform>
+        </ScrollBar>
+        <TextBlock HorizontalAlignment="Left" Margin="61,70,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="222" Width="540" Foreground="#FF00B10B"/>
     </Grid>
 </Window>
