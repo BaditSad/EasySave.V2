@@ -34,69 +34,64 @@ namespace EasySave
         {
             this.Close();
         }
-
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow window = new MainWindow();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
         }
-
         private void French_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void English_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void SourceFolderFiles(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void TargetFolderFiles(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void SaveFiles(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void ClearFiles(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void SourceFolderFile(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void TargetFolderFile(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void SaveFile(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void ClearFile(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void Config_Click(object sender, RoutedEventArgs e)
         {
-
+            Config window = new Config();
+            window.Top = this.Top + 100;
+            window.Left = this.Left + 250;
+            window.Show();
         }
     }
 }

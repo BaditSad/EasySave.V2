@@ -23,5 +23,32 @@ namespace EasySave
         {
             InitializeComponent();
         }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void DefaultTargetPath(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OpenExt(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ResetLog(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Apply(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void DragConfigMenu(object sender, MouseEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

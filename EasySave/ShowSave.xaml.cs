@@ -40,7 +40,11 @@ namespace EasySave
         }
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow window = new MainWindow();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
@@ -50,9 +54,12 @@ namespace EasySave
         {
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Config_Click(object sender, RoutedEventArgs e)
         {
-
+            Config window = new Config();
+            window.Top = this.Top + 100;
+            window.Left = this.Left + 250;
+            window.Show();
         }
     }
 }

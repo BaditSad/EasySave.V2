@@ -22,7 +22,22 @@
     <None Remove="minim white.png" />
     <None Remove="minimize white.png" />
     <None Remove="minimize.png" />
-    <None Remove="SAVE.png" />
+    <None Remove="pictures\CLEAR.png" />
+    <None Remove="pictures\CMD.png" />
+    <None Remove="pictures\CREER_SAUVEGARDE.png" />
+    <None Remove="pictures\eclair.png" />
+    <None Remove="pictures\homepage.png" />
+    <None Remove="pictures\LOG_TERMINAL.png" />
+    <None Remove="pictures\NETTOYER.png" />
+    <None Remove="pictures\SAUVEGARDER.png" />
+    <None Remove="pictures\SAUVEGARDE_FICHIER.png" />
+    <None Remove="pictures\SAUVEGARDE_FICHIERS.png" />
+    <None Remove="pictures\SAVE.png" />
+    <None Remove="pictures\SAVE_FILE.png" />
+    <None Remove="pictures\SAVE_FILES.png" />
+    <None Remove="pictures\TERMINAL_LOGS.png" />
+    <None Remove="pictures\trash.png" />
+    <None Remove="pictures\VOIR_SAUVEGARDE.png" />
     <None Remove="SHOW_SAVES.png" />
     <None Remove="united-kingdom.png" />
   </ItemGroup>
@@ -30,20 +45,35 @@
   <ItemGroup>
     <Resource Include="pictures\Background.png" />
     <Resource Include="pictures\Background_1.png" />
+    <Resource Include="pictures\CLEAR.png" />
     <Resource Include="pictures\close white.png" />
     <Resource Include="pictures\close.png" />
+    <Resource Include="pictures\CMD.png" />
     <Resource Include="pictures\CREATE SAVE.png" />
     <Resource Include="pictures\CREATE_SAVE.png" />
+    <Resource Include="pictures\CREER_SAUVEGARDE.png" />
     <Resource Include="pictures\EasySave-28-11-2022.png" />
+    <Resource Include="pictures\eclair.png" />
     <Resource Include="pictures\Engrenage.png" />
     <Resource Include="pictures\france.png" />
     <Resource Include="pictures\gear.png" />
+    <Resource Include="pictures\homepage.png" />
+    <Resource Include="pictures\LOG_TERMINAL.png" />
     <Resource Include="pictures\minim white.png" />
     <Resource Include="pictures\minimize white.png" />
     <Resource Include="pictures\minimize.png" />
+    <Resource Include="pictures\NETTOYER.png" />
+    <Resource Include="pictures\SAUVEGARDER.png" />
+    <Resource Include="pictures\SAUVEGARDE_FICHIER.png" />
+    <Resource Include="pictures\SAUVEGARDE_FICHIERS.png" />
+    <Resource Include="pictures\SAVE.png" />
+    <Resource Include="pictures\SAVE_FILE.png" />
+    <Resource Include="pictures\SAVE_FILES.png" />
     <Resource Include="pictures\SHOW_SAVES.png" />
+    <Resource Include="pictures\TERMINAL_LOGS.png" />
+    <Resource Include="pictures\trash.png" />
     <Resource Include="pictures\united-kingdom.png" />
-    <Resource Include="SAVE.png" />
+    <Resource Include="pictures\VOIR_SAUVEGARDE.png" />
   </ItemGroup>
 
 </Project>

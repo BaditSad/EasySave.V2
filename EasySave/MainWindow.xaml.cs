@@ -35,12 +35,20 @@ namespace EasySave
 
         private void Create_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateSave window = new CreateSave();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
         }
 
         private void Show_Click(object sender, RoutedEventArgs e)
         {
-            
+            ShowSave window = new ShowSave();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
@@ -57,14 +65,16 @@ namespace EasySave
         {
 
         }
-
         private void English_Click(object sender, RoutedEventArgs e)
         {
 
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {
-
+            Config window = new Config();
+            window.Top = this.Top + 100;
+            window.Left = this.Left + 250;
+            window.Show();
         }
     }
 }
