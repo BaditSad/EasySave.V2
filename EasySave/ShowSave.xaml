@@ -64,16 +64,21 @@
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Center" Width="50" Height="52" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/pictures/gear.png"/>
-            </Button.Background>
-        </Button>
         <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="272" Margin="26,45,0,0" VerticalAlignment="Top" Width="630">
             <Rectangle.Fill>
                 <ImageBrush  ImageSource="/pictures/CMD.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="51" Margin="504,267,0,0" VerticalAlignment="Top" Width="152"/>
+        <Image Source="/pictures/LOG_TERMINAL.png" HorizontalAlignment="Left" Height="44" Margin="511,283,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="24" Click="Home_Click" Height="23">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/homepage.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="700,214,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/gear.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

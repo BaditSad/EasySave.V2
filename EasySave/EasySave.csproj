@@ -22,12 +22,12 @@
     <None Remove="minim white.png" />
     <None Remove="minimize white.png" />
     <None Remove="minimize.png" />
+    <None Remove="SAVE.png" />
     <None Remove="SHOW_SAVES.png" />
     <None Remove="united-kingdom.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="CMD.png" />
     <Resource Include="pictures\Background.png" />
     <Resource Include="pictures\Background_1.png" />
     <Resource Include="pictures\close white.png" />
@@ -43,6 +43,7 @@
     <Resource Include="pictures\minimize.png" />
     <Resource Include="pictures\SHOW_SAVES.png" />
     <Resource Include="pictures\united-kingdom.png" />
+    <Resource Include="SAVE.png" />
   </ItemGroup>
 
 </Project>

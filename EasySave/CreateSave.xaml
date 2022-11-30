@@ -64,12 +64,68 @@
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Center" Width="50" Height="52" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Image Source="/pictures/SAVE_FILES.png" HorizontalAlignment="Left" Height="51" Margin="45,53,0,0" VerticalAlignment="Top" Width="152"/>
+        <Image Source="/pictures/SAVE_FILE.png" HorizontalAlignment="Left" Height="51" Margin="360,53,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="24" Click="Home_Click" Height="23">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/homepage.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="700,214,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Config_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/pictures/gear.png"/>
             </Button.Background>
         </Button>
-        <Image Source="/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="51" Margin="520,279,0,0" VerticalAlignment="Top" Width="152"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="238" Margin="51,66,0,0" VerticalAlignment="Top" Width="272" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="238" Margin="366,66,0,0" VerticalAlignment="Top" Width="272" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="61,96,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="61,180,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="377,96,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="69" Margin="377,180,0,0" VerticalAlignment="Top" Width="251" Fill="White"/>
+        <Label Content="Select a folder :" HorizontalAlignment="Left" Margin="61,96,0,0" VerticalAlignment="Top" Width="92" Foreground="White"/>
+        <Label Content="Select the target folder :" HorizontalAlignment="Left" Margin="61,180,0,0" VerticalAlignment="Top" Width="141" Foreground="White"/>
+        <Label Content="Select a file :" HorizontalAlignment="Left" Margin="377,96,0,0" VerticalAlignment="Top" Width="92" Foreground="White"/>
+        <Label Content="Select the target folder :" HorizontalAlignment="Left" Margin="377,180,0,0" VerticalAlignment="Top" Width="142" Foreground="White"/>
+        <Button Content="..." Click="TargetFolderFiles" HorizontalAlignment="Left" Margin="273,183,0,0" VerticalAlignment="Top" Width="23" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+        <Button Content="..." Click="SourceFolderFiles"  HorizontalAlignment="Left" Margin="273,99,0,0" VerticalAlignment="Top" Width="23" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+        <Button Content="..." Click="TargetFolderFile" HorizontalAlignment="Left" Margin="590,183,0,0" VerticalAlignment="Top" Width="23" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+        <Button Content="..." Click="SourceFolderFile" HorizontalAlignment="Left" Margin="590,99,0,0" VerticalAlignment="Top" Width="23" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+        <Button Content="..." Click="SaveFiles" HorizontalAlignment="Left" Margin="62,255,0,0" VerticalAlignment="Top" Width="124" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/SAVE.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Click="ClearFiles" HorizontalAlignment="Left" Margin="189,255,0,0" VerticalAlignment="Top" Width="123" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/CLEAR.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.8" HorizontalAlignment="Left" Height="238" Margin="343,66,0,0" VerticalAlignment="Top" Width="4" Fill="#FFFBD930">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE41B7F"/>
+                    <GradientStop Color="#FFFC3226" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Button Content="" Click="SaveFile" HorizontalAlignment="Left" Margin="381,255,0,0" VerticalAlignment="Top" Width="124" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/SAVE.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Click="ClearFile" HorizontalAlignment="Left" Margin="508,255,0,0" VerticalAlignment="Top" Width="123" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/pictures/CLEAR.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,0,0,0" VerticalAlignment="Center" Width="237" Fill="#FF3762CC"/>
+        <TextBox HorizontalAlignment="Left" Margin="74,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="222" Background="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,127,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="28" Margin="384,0,0,0" VerticalAlignment="Center" Width="237" Fill="#FF3762CC"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="384,127,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
+        <TextBox HorizontalAlignment="Left" Margin="76,133,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222" Background="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="392,133,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222" Background="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="392,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="222" Background="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
 
     </Grid>
 </Window>

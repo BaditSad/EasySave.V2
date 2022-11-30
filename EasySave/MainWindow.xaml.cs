@@ -62,5 +62,9 @@ namespace EasySave
         {
 
         }
+        private void Config_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

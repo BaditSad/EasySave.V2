@@ -23,5 +23,80 @@ namespace EasySave
         {
             InitializeComponent();
         }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+        }
+        private void WindowsBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void French_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void English_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SourceFolderFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TargetFolderFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SaveFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClearFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SourceFolderFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TargetFolderFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SaveFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClearFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Config_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
