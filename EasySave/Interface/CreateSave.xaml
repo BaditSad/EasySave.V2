@@ -34,13 +34,13 @@
     </Window.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush x:Name="Background_image" ImageSource="/pictures/Background_1.png"/>
+            <ImageBrush x:Name="Background_image" ImageSource="/Interface/pictures/Background_1.png"/>
         </Grid.Background>
         <Label Content="EasySave © 2022 - 2023 / Brieuc.D - Arthur.K - Weicheng.L - Jean-Loup.D (CESI Lille - Groupe 2)" Margin="86,341,197,0" VerticalAlignment="Top" Foreground="White"/>
         <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
         <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/close white.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/close white.png"/>
             </Button.Background>
             <Button.Foreground>
                 <ImageBrush/>
@@ -48,32 +48,32 @@
         </Button>
         <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="French_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/france.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/france.png"/>
             </Button.Background>
         </Button>
         <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="51,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="English_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/united-kingdom.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/united-kingdom.png"/>
             </Button.Background>
         </Button>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="611,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Minimize_Click" Height="20">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/minim white.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/minim white.png"/>
             </Button.Background>
             <Button.Foreground>
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Image Source="/pictures/SAVE_FILES.png" HorizontalAlignment="Left" Height="51" Margin="45,53,0,0" VerticalAlignment="Top" Width="152"/>
-        <Image Source="/pictures/SAVE_FILE.png" HorizontalAlignment="Left" Height="51" Margin="360,53,0,0" VerticalAlignment="Top" Width="152"/>
+        <Image Source="/Interface/pictures/SAVE_FILES.png" HorizontalAlignment="Left" Height="51" Margin="45,53,0,0" VerticalAlignment="Top" Width="152"/>
+        <Image Source="/Interface/pictures/SAVE_FILE.png" HorizontalAlignment="Left" Height="51" Margin="360,53,0,0" VerticalAlignment="Top" Width="152"/>
         <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="24" Click="Home_Click" Height="23">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/homepage.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/homepage.png"/>
             </Button.Background>
         </Button>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="700,214,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.331,0.123" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Config_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/gear.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/gear.png"/>
             </Button.Background>
         </Button>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="238" Margin="51,66,0,0" VerticalAlignment="Top" Width="272" Fill="White"/>
@@ -98,12 +98,12 @@
 
         <Button Content="..." Click="SaveFiles" HorizontalAlignment="Left" Margin="62,255,0,0" VerticalAlignment="Top" Width="124" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/SAVE.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/SAVE.png"/>
             </Button.Background>
         </Button>
         <Button Content="" Click="ClearFiles" HorizontalAlignment="Left" Margin="189,255,0,0" VerticalAlignment="Top" Width="123" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/CLEAR.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/CLEAR.png"/>
             </Button.Background>
         </Button>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.8" HorizontalAlignment="Left" Height="238" Margin="343,66,0,0" VerticalAlignment="Top" Width="4" Fill="#FFFBD930">
@@ -116,12 +116,12 @@
         </Rectangle>
         <Button Content="" Click="SaveFile" HorizontalAlignment="Left" Margin="381,255,0,0" VerticalAlignment="Top" Width="124" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/SAVE.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/SAVE.png"/>
             </Button.Background>
         </Button>
         <Button Content="" Click="ClearFile" HorizontalAlignment="Left" Margin="508,255,0,0" VerticalAlignment="Top" Width="123" Height="37" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
-                <ImageBrush ImageSource="/pictures/CLEAR.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/CLEAR.png"/>
             </Button.Background>
         </Button>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,0,0,0" VerticalAlignment="Center" Width="237" Fill="#FF3762CC"/>
