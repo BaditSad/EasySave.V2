@@ -53,6 +53,8 @@ namespace EasySave
 
         private void Close_Click(object sender, RoutedEventArgs e)
         {
+            Check save = new Check();
+            save.SaveCheck();
             this.Close();
         }
 

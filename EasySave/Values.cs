@@ -20,6 +20,10 @@ namespace EasySave
         {
             get; set;
         }
+        public string FileExt //Target path folder
+        {
+            get; set;
+        }
         private Values() { }
         public static readonly Values Instance = new Values();
     }

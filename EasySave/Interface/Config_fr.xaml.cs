@@ -23,11 +23,22 @@ namespace EasySave
         {
             InitializeComponent();
             TextBoxPathTargetFr.Text = Values.Instance.PathTarget;
+            if (Values.Instance.FileExt == ".json")
+            {
+                ComboBox.SelectedIndex = 0;
+            }
+            else if (Values.Instance.FileExt == ".xml")
+            {
+                ComboBox.SelectedIndex = 1;
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
         }
-
+        private void TextBoxPathTargetFr_TextChanged(object sender, EventArgs e)
+        {
+            Values.Instance.PathTarget = TextBoxPathTargetFr.Text;
+        }
         private void DefaultTargetPath(object sender, RoutedEventArgs e)
         {
             var dialog = new Microsoft.Win32.OpenFileDialog();
@@ -50,6 +61,10 @@ namespace EasySave
 
         private void Apply(object sender, RoutedEventArgs e)
         {
+            Values.Instance.PathTarget = TextBoxPathTargetFr.Text;
+            Values.Instance.FileExt = ComboBox.Text;
+            Check save = new Check();
+            save.SaveCheck();
             this.Close();
         }
         private void DragConfigMenu(object sender, MouseEventArgs e)

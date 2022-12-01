@@ -34,12 +34,21 @@
             <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Center" Height="182" VerticalAlignment="Center" Width="232" Fill="#FF4671C6"/>
             <Label Content="Chemin cible par défaut :" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top" Width="146" Foreground="White"/>
             <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Center" Height="29" Margin="0,41,0,0" VerticalAlignment="Top" Width="218" Fill="#FF3762CC"/>
-            <TextBox x:Name="TextBoxPathTargetFr" MaxHeight="17.96" HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
-            <Button Content="RESET LOG" Style="{StaticResource defaultButtonStyle}" Click="ResetLog" HorizontalAlignment="Center" Margin="0,113,0,0" VerticalAlignment="Top" Height="27" Width="148" BorderBrush="#FFFF8D8D" Foreground="#FFFF8D8D" Background="#FFE03F3F" BorderThickness="2,2,2,2"/>
-            <Button Content="APPLIQUER / FERMER" Style="{StaticResource defaultButtonStyle}" Click="Apply" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Height="27" Width="148" Foreground="#FFB0FF8D" BorderBrush="#FFB0FF8D" Background="#FF43BD0D" BorderThickness="2,2,2,2"/>
+            <TextBox x:Name="TextBoxPathTargetFr" Text="" TextChanged="TextBoxPathTargetFr_TextChanged" MaxHeight="17.96" HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Foreground="#FF3762CC"/>
+            <Button Content="RESET LOG" Style="{StaticResource defaultButtonStyle}" Click="ResetLog" HorizontalAlignment="Center" Margin="0,113,0,0" VerticalAlignment="Top" Height="27" Width="148" BorderBrush="#FFFF8D8D" Foreground="White" Background="#FFE03F3F" BorderThickness="2,2,2,2"/>
+            <Button Content="APPLIQUER / FERMER" Style="{StaticResource defaultButtonStyle}" Click="Apply" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Height="27" Width="148" Foreground="White" BorderBrush="#FFB0FF8D" Background="#FF43BD0D" BorderThickness="2,2,2,2"/>
             <Rectangle HorizontalAlignment="Left" Height="20" Margin="189,18,0,0" VerticalAlignment="Top" Width="36" Fill="#FF66F8F9"/>
             <Button Content="..." Style="{StaticResource defaultButtonStyle}" Click="DefaultTargetPath" HorizontalAlignment="Left" Margin="191,20,0,0" VerticalAlignment="Top" Width="32" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" RenderTransformOrigin="0.522,0.472"/>
-            <ComboBox HorizontalAlignment="Left" Margin="161,79,0,0" VerticalAlignment="Top" Width="64"/>
+            <ComboBox Name="ComboBox" HorizontalAlignment="Left" Margin="161,79,0,0" VerticalAlignment="Top" Width="64" Foreground="#FF3762CC">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+                <ComboBoxItem>.json</ComboBoxItem>
+                <ComboBoxItem>.xml</ComboBoxItem>
+            </ComboBox>
             <Label Content="Type des fichiers config :" HorizontalAlignment="Left" Margin="23,77,0,0" VerticalAlignment="Top" Width="141" Foreground="White"/>
         </Grid>
     </Border>

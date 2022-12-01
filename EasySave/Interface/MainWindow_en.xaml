@@ -36,7 +36,7 @@
         <Grid.Background>
             <ImageBrush x:Name="Background_image" ImageSource="/Interface/pictures/Background_1.png"/>
         </Grid.Background>
-        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="339" Margin="73,0,0,0" VerticalAlignment="Center" Width="548" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="265" Margin="73,52,0,0" VerticalAlignment="Top" Width="548" Fill="White"/>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="86,142,0,0" VerticalAlignment="Top" Height="92" Width="272" Click="Create_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/CREATE_SAVE.png"/>
