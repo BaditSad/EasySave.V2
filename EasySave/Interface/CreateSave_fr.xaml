@@ -122,13 +122,13 @@
             </Button.Background>
         </Button>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,0,0,0" VerticalAlignment="Center" Width="237" Fill="#FF3762CC"/>
-        <TextBox HorizontalAlignment="Left" Margin="74,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="Black" MaxHeight="17.96"/>
+        <TextBox Name = "TargetFiles" HorizontalAlignment="Left" Margin="74,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="#FF3762CC" MaxHeight="17.96"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,127,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="28" Margin="384,0,0,0" VerticalAlignment="Center" Width="237" Fill="#FF3762CC"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="384,127,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
-        <TextBox HorizontalAlignment="Left" Margin="76,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="Black" MaxHeight="17.96"/>
-        <TextBox HorizontalAlignment="Left" Margin="392,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="Black" MaxHeight="17.96"/>
-        <TextBox HorizontalAlignment="Left" Margin="392,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB6BECE" Foreground="Black" MaxHeight="17.96"/>
+        <TextBox Name="SourceFiles" HorizontalAlignment="Left" Margin="76,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="#FF3762CC" MaxHeight="17.96"/>
+        <TextBox Name="SourceFile" HorizontalAlignment="Left" Margin="392,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="#FF3762CC" MaxHeight="17.96"/>
+        <TextBox Name="TargetFile" HorizontalAlignment="Left" Margin="392,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB6BECE" Foreground="#FF3762CC" MaxHeight="17.96"/>
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
         <Image Source="/Interface/pictures/SAUVEGARDE_FICHIERS.png" HorizontalAlignment="Left" Height="58" Margin="43,47,0,0" VerticalAlignment="Top" Width="272"/>
         <Image Source="/Interface/pictures/SAUVEGARDE_FICHIER.png" HorizontalAlignment="Left" Height="53" Margin="355,48,0,0" VerticalAlignment="Top" Width="277"/>

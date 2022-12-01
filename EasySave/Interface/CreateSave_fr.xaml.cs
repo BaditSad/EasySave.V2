@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,8 @@ namespace EasySave
         public CreateSave_fr()
         {
             InitializeComponent();
+            TargetFile.Text = Values.Instance.PathTarget;
+            TargetFiles.Text = Values.Instance.PathTarget;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -62,35 +66,63 @@ namespace EasySave
         }
         private void SourceFolderFiles(object sender, RoutedEventArgs e)
         {
-
+            var dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                SourceFiles.Text = dialog.FileName;
+                this.Topmost = true;
+            }
         }
         private void TargetFolderFiles(object sender, RoutedEventArgs e)
         {
-
+            var dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                TargetFiles.Text = dialog.FileName;
+                this.Topmost = true;
+            }
         }
         private void SaveFiles(object sender, RoutedEventArgs e)
         {
-
+            CreateSave save = new CreateSave();
+            save.SaveFiles(SourceFiles.Text, TargetFiles.Text);
         }
         private void ClearFiles(object sender, RoutedEventArgs e)
         {
-
+            SourceFiles.Text = "";
+            TargetFiles.Text = "";
         }
         private void SourceFolderFile(object sender, RoutedEventArgs e)
         {
-
+            var dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = false;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                SourceFile.Text = dialog.FileName;
+                this.Topmost = true;
+            }
         }
         private void TargetFolderFile(object sender, RoutedEventArgs e)
         {
-
+            var dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                TargetFile.Text = dialog.FileName;
+                this.Topmost = true;
+            }
         }
         private void SaveFile(object sender, RoutedEventArgs e)
         {
-
+            CreateSave save = new CreateSave();
+            save.SaveFile(SourceFile.Text, TargetFile.Text);
         }
         private void ClearFile(object sender, RoutedEventArgs e)
         {
-
+            SourceFile.Text = "";
+            TargetFile.Text = "";
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {

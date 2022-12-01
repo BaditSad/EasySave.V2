@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,18 @@ namespace EasySave
         public ShowSave_en()
         {
             InitializeComponent();
+            if (Values.Instance.FileExt == ".json")
+            {
+                StreamReader log = new StreamReader(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
+                Log.Text = log.ReadToEnd();
+                log.Close();
+            }
+            else if (Values.Instance.FileExt == ".xml")
+            {
+                StreamReader log = new StreamReader(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
+                Log.Text = log.ReadToEnd();
+                log.Close();
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

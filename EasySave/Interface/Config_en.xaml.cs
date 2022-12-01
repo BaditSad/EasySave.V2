@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace EasySave
 {
@@ -37,15 +39,12 @@ namespace EasySave
         }
         private void DefaultTargetPath(object sender, RoutedEventArgs e)
         {
-            var dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.ValidateNames = false;
-            dialog.CheckFileExists = false;
-            dialog.CheckPathExists = true;
-            dialog.FileName = "Folder Selection.";
-            bool? result = dialog.ShowDialog();
-            if (result == true)
+            var dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                TextBoxPathTargetEn.Text = Values.Instance.PathTarget;
+                TextBoxPathTargetEn.Text = dialog.FileName;
+                this.Topmost = true;
             }
         }
         private void ResetLog(object sender, RoutedEventArgs e)

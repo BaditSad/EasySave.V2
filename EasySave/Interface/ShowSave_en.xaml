@@ -68,7 +68,6 @@
                 <ImageBrush  ImageSource="/Interface/pictures/CMD.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="/Interface/pictures/LOG_TERMINAL.png" HorizontalAlignment="Left" Height="44" Margin="26,282,0,0" VerticalAlignment="Top" Width="151"/>
         <Button Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="24" Click="Home_Click" Height="23">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/homepage.png"/>
@@ -80,24 +79,7 @@
             </Button.Background>
         </Button>
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
-        <ScrollBar Opacity="0.9" HorizontalAlignment="Left" Margin="601,70,0,0" VerticalAlignment="Top" Height="222" Width="5" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
-            <ScrollBar.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF252525"/>
-                    <GradientStop Color="#FF2B2B2B" Offset="1"/>
-                    <GradientStop Color="#FF838383" Offset="0.517"/>
-                    <GradientStop Color="#FF838383" Offset="0.537"/>
-                </LinearGradientBrush>
-            </ScrollBar.BorderBrush>
-            <ScrollBar.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ScrollBar.RenderTransform>
-        </ScrollBar>
-        <TextBlock HorizontalAlignment="Left" Margin="61,70,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="222" Width="540" Foreground="#FF00B10B"/>
+        <Image Source="/Interface/pictures/LOG_TERMINAL.png" HorizontalAlignment="Left" Height="44" Margin="26,282,0,0" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="Log" TextWrapping="Wrap" Text="" Foreground="#FF00B10B" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Margin="61,70,179,158" BorderThickness="0,0,0,0"/>
     </Grid>
 </Window>

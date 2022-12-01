@@ -11,6 +11,13 @@ namespace EasySave
 {
     internal class CreateSave
     {
-        
+        public void SaveFiles(string _sourcePath, string _targetPath)
+        {
+
+        }
+        public void SaveFile(string _sourcePath, string _targetPath)
+        {
+
+        }
     }
 }

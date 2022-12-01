@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,16 +42,12 @@ namespace EasySave
         }
         private void DefaultTargetPath(object sender, RoutedEventArgs e)
         {
-            var dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.ValidateNames = false;
-            dialog.CheckFileExists = false;
-            dialog.CheckPathExists = true;
-            dialog.FileName = "Folder Selection.";
-            bool? result = dialog.ShowDialog();
-            if (result == true)
+            var dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                Values.Instance.PathTarget = dialog.FileName;
-                TextBoxPathTargetFr.Text = Values.Instance.PathTarget;
+                TextBoxPathTargetFr.Text = dialog.FileName;
+                this.Topmost = true;
             }
         }
         private void ResetLog(object sender, RoutedEventArgs e)
