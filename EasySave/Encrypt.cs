@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace EasySave
 {
-    internal class Crypt
+    internal class Encrypt
     {
         
     }

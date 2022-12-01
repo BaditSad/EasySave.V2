@@ -22,6 +22,7 @@ namespace EasySave
         public Config_fr()
         {
             InitializeComponent();
+            TextBoxPathTargetFr.Text = Values.Instance.PathTarget;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -29,17 +30,22 @@ namespace EasySave
 
         private void DefaultTargetPath(object sender, RoutedEventArgs e)
         {
-
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.ValidateNames = false;
+            dialog.CheckFileExists = false;
+            dialog.CheckPathExists = true;
+            dialog.FileName = "Folder Selection.";
+            bool? result = dialog.ShowDialog();
+            if (result == true)
+            {
+                Values.Instance.PathTarget = dialog.FileName;
+                TextBoxPathTargetFr.Text = Values.Instance.PathTarget;
+            }
         }
-
-        private void OpenExt(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ResetLog(object sender, RoutedEventArgs e)
         {
-
+            Reset method = new Reset();
+            method.Log();
         }
 
         private void Apply(object sender, RoutedEventArgs e)

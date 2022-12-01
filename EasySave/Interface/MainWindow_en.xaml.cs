@@ -101,5 +101,22 @@ namespace EasySave
             this.Close();
             window.Show();
         }
+        private void Crypt_Click(object sender, RoutedEventArgs e)
+        {
+            Crypt_en window = new Crypt_en();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
+        }
+
+        private void Decrypt_Click(object sender, RoutedEventArgs e)
+        {
+            Decrypt_en window = new Decrypt_en();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
+        }
     }
 }

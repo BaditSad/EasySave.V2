@@ -10,18 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Drawing;
 
 namespace EasySave
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour ShowSave.xaml
     /// </summary>
-    public partial class Info_en : Window
+    public partial class Crypt_fr : Window
     {
-        public Info_en()
+        public Crypt_fr()
         {
             InitializeComponent();
         }
@@ -36,15 +34,13 @@ namespace EasySave
         {
             this.Close();
         }
-
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
-
-        private void French_Click(object sender, RoutedEventArgs e)
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
-            Info_fr window = new Info_fr();
+            MainWindow_fr window = new MainWindow_fr();
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
@@ -52,16 +48,37 @@ namespace EasySave
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
-            //Nothing
-        }
-
-        private void Home_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow_en window = new MainWindow_en();
+            Crypt_en window = new Crypt_en();
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
             window.Show();
+        }
+        private void French_Click(object sender, RoutedEventArgs e)
+        {
+            //Nothing
+        }
+        private void Config_Click(object sender, RoutedEventArgs e)
+        {
+            Config_fr window = new Config_fr();
+            window.Top = this.Top + 100;
+            window.Left = this.Left + 250;
+            window.Show();
+        }
+
+        private void OpenExt(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CryptFolderFiles(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Crypt_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

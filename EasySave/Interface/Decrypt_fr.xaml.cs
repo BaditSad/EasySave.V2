@@ -10,18 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Drawing;
 
 namespace EasySave
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour ShowSave.xaml
     /// </summary>
-    public partial class MainWindow_fr : Window
+    public partial class Decrypt_fr : Window
     {
-        public MainWindow_fr()
+        public Decrypt_fr()
         {
             InitializeComponent();
         }
@@ -32,46 +30,33 @@ namespace EasySave
         {
             this.DragMove();
         }
-
-        private void Create_Click(object sender, RoutedEventArgs e)
-        {
-            CreateSave_fr window = new CreateSave_fr();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-            window.Show();
-        }
-
-        private void Show_Click(object sender, RoutedEventArgs e)
-        {
-            ShowSave_fr window = new ShowSave_fr();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-            window.Show();
-        }
-
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
-
-        private void French_Click(object sender, RoutedEventArgs e)
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
-            //Nothing
-        }
-        private void English_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow_en window = new MainWindow_en();
+            MainWindow_fr window = new MainWindow_fr();
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
             window.Show();
+        }
+        private void English_Click(object sender, RoutedEventArgs e)
+        {
+            Decrypt_en window = new Decrypt_en();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            window.Show();
+        }
+        private void French_Click(object sender, RoutedEventArgs e)
+        {
+            //Nothing
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {
@@ -80,31 +65,20 @@ namespace EasySave
             window.Left = this.Left + 250;
             window.Show();
         }
-        private void Info_Click(object sender, RoutedEventArgs e)
+
+        private void CryptFolderFiles(object sender, RoutedEventArgs e)
         {
-            Info_fr window = new Info_fr();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-            window.Show();
+
         }
 
-        private void Crypt_Click(object sender, RoutedEventArgs e)
+        private void OpenExt(object sender, RoutedEventArgs e)
         {
-            Crypt_fr window = new Crypt_fr();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-            window.Show();
+
         }
 
         private void Decrypt_Click(object sender, RoutedEventArgs e)
         {
-            Decrypt_fr window = new Decrypt_fr();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-            window.Show();
+
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySave"
         mc:Ignorable="d"
-        Title="Config_en" Height="201" Width="181" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize">
+        Title="Config_en" Height="205" Width="252" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="defaultButtonStyle" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -30,18 +30,17 @@
         </Style>
     </Window.Resources>
     <Border CornerRadius="25">
-        <Grid Background="#FF3762CC" MouseDown="DragConfigMenu" Margin="0,0,-70,0">
+        <Grid Background="#FF3762CC" MouseDown="DragConfigMenu">
             <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Center" Height="182" VerticalAlignment="Center" Width="232" Fill="#FF4671C6"/>
             <Label Content="Default target path :" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top" Width="118" Foreground="White"/>
             <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Center" Height="29" Margin="0,41,0,0" VerticalAlignment="Top" Width="218" Fill="#FF3762CC"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
-            <Rectangle HorizontalAlignment="Left" Height="20" Margin="187,78,0,0" VerticalAlignment="Top" Width="38" Fill="#FF66F8F9"/>
-            <Button Content="Open" Style="{StaticResource defaultButtonStyle}" Click="OpenExt" HorizontalAlignment="Left" Margin="189,80,0,0" VerticalAlignment="Top" Width="34" Background="#FF3FABE0" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" Padding="1,1,1,2" BorderThickness="2,2,2,2"/>
-            <Label Content="Extension to crypt :" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" Width="118" Foreground="White"/>
+            <TextBox Name="TextBoxPathTargetEn" HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Text="" MaxHeight="17.96"/>
             <Button Content="RESET LOG" Style="{StaticResource defaultButtonStyle}" Click="ResetLog" HorizontalAlignment="Center" Margin="0,113,0,0" VerticalAlignment="Top" Height="27" Width="148" BorderBrush="#FFFF8D8D" Foreground="#FFFF8D8D" Background="#FFE03F3F" BorderThickness="2,2,2,2"/>
             <Button Content="APPLY / EXIT" Style="{StaticResource defaultButtonStyle}" Click="Apply" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Height="27" Width="148" Foreground="#FFB0FF8D" BorderBrush="#FFB0FF8D" Background="#FF43BD0D" BorderThickness="2,2,2,2"/>
             <Rectangle HorizontalAlignment="Left" Height="20" Margin="189,18,0,0" VerticalAlignment="Top" Width="36" Fill="#FF66F8F9"/>
             <Button Content="..." Style="{StaticResource defaultButtonStyle}" Click="DefaultTargetPath" HorizontalAlignment="Left" Margin="191,20,0,0" VerticalAlignment="Top" Width="32" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" RenderTransformOrigin="0.522,0.472"/>
+            <ComboBox HorizontalAlignment="Left" Margin="161,79,0,0" VerticalAlignment="Top" Width="64"/>
+            <Label Content="Type config files :" HorizontalAlignment="Left" Margin="26,77,0,0" VerticalAlignment="Top" Width="118" Foreground="White"/>
         </Grid>
     </Border>
 </Window>
