@@ -37,6 +37,7 @@
             <ImageBrush x:Name="Background_image" ImageSource="/Interface/pictures/Background_1.png"/>
         </Grid.Background>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="262" Margin="73,52,0,0" VerticalAlignment="Top" Width="548" Fill="White"/>
+        <Image Source="/Interface/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="147" Margin="177,37,0,0" VerticalAlignment="Top" Width="426"/>
         <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="93,142,0,0" VerticalAlignment="Top" Height="92" Width="254" Click="Create_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/CREER_SAUVEGARDE.png"/>
@@ -47,7 +48,6 @@
                 <ImageBrush ImageSource="/Interface/pictures/VOIR_SAUVEGARDE.png"/>
             </Button.Background>
         </Button>
-        <Image Source="/Interface/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="147" Margin="177,37,0,0" VerticalAlignment="Top" Width="426"/>
         <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
         <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
             <Button.Background>
