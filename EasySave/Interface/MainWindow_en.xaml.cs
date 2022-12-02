@@ -34,8 +34,8 @@ namespace EasySave
                 MainWindow_fr window = new MainWindow_fr();
                 window.Top = this.Top;
                 window.Left = this.Left;
-                this.Close();
                 window.Show();
+                this.Close();
             }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -51,8 +51,8 @@ namespace EasySave
             CreateSave_en window = new CreateSave_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
 
         private void Show_Click(object sender, RoutedEventArgs e)
@@ -60,8 +60,8 @@ namespace EasySave
             ShowSave_en window = new ShowSave_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
@@ -81,8 +81,8 @@ namespace EasySave
             MainWindow_fr window = new MainWindow_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
@@ -100,16 +100,16 @@ namespace EasySave
             Info_en window = new Info_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void Crypt_Click(object sender, RoutedEventArgs e)
         {
             Crypt_en window = new Crypt_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
 
         private void Decrypt_Click(object sender, RoutedEventArgs e)
@@ -117,8 +117,8 @@ namespace EasySave
             Decrypt_en window = new Decrypt_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
     }
 }

@@ -45,8 +45,8 @@ namespace EasySave
             MainWindow_en window = new MainWindow_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
@@ -57,8 +57,8 @@ namespace EasySave
             Decrypt_fr window = new Decrypt_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {

@@ -38,8 +38,8 @@ namespace EasySave
             CreateSave_fr window = new CreateSave_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
 
         private void Show_Click(object sender, RoutedEventArgs e)
@@ -47,8 +47,8 @@ namespace EasySave
             ShowSave_fr window = new ShowSave_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
@@ -72,8 +72,8 @@ namespace EasySave
             MainWindow_en window = new MainWindow_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {
@@ -87,8 +87,8 @@ namespace EasySave
             Info_fr window = new Info_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
 
         private void Crypt_Click(object sender, RoutedEventArgs e)
@@ -96,8 +96,8 @@ namespace EasySave
             Crypt_fr window = new Crypt_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
 
         private void Decrypt_Click(object sender, RoutedEventArgs e)
@@ -105,8 +105,8 @@ namespace EasySave
             Decrypt_fr window = new Decrypt_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
     }
 }

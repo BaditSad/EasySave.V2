@@ -45,16 +45,16 @@ namespace EasySave
             MainWindow_fr window = new MainWindow_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
             Crypt_en window = new Crypt_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void French_Click(object sender, RoutedEventArgs e)
         {

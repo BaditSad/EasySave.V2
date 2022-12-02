@@ -23,18 +23,7 @@ namespace EasySave
         public ShowSave_fr()
         {
             InitializeComponent();
-            if (Values.Instance.FileExt == ".json")
-            {
-                StreamReader log = new StreamReader(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
-                Log.Text = log.ReadToEnd();
-                log.Close();
-            }
-            else if (Values.Instance.FileExt == ".xml")
-            {
-                StreamReader log = new StreamReader(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
-                Log.Text = log.ReadToEnd();
-                log.Close();
-            }
+            Log.Text = ShowSaves.Show_Saves();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -58,16 +47,16 @@ namespace EasySave
             MainWindow_fr window = new MainWindow_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
             ShowSave_en window = new ShowSave_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void French_Click(object sender, RoutedEventArgs e)
         {

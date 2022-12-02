@@ -49,16 +49,16 @@ namespace EasySave
             MainWindow_en window = new MainWindow_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void French_Click(object sender, RoutedEventArgs e)
         {
             CreateSave_fr window = new CreateSave_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {

@@ -49,8 +49,8 @@ namespace EasySave
             MainWindow_fr window = new MainWindow_fr();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void French_Click(object sender, RoutedEventArgs e)
         {
@@ -61,8 +61,8 @@ namespace EasySave
             CreateSave_en window = new CreateSave_en();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
             window.Show();
+            this.Close();
         }
         private void SourceFolderFiles(object sender, RoutedEventArgs e)
         {
