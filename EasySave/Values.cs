@@ -8,6 +8,14 @@ namespace EasySave
 {
     internal class Values
     {
+        public readonly string[] ext = new string[]
+        { ".json", ".xml", ".doc", ".docx", ".css", ".html", ".js", ".php" };
+
+        public string SecretKey //secretKey for encryption
+        {
+            get; set;
+        }
+
         public string Lang //Language
         {
             get; set;

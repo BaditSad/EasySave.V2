@@ -30,6 +30,11 @@ namespace EasySave
                 StreamWriter file = new StreamWriter(Values.Instance.PathConfig + "\\Config\\File.json");
                 file.WriteLine(Values.Instance.FileExt);
                 file.Close();
+
+                StreamWriter secretKey = new StreamWriter(Values.Instance.PathConfig + "\\Config\\SecretKey.json");
+                secretKey.WriteLine("cesi");
+                Values.Instance.SecretKey = "cesi";
+                secretKey.Close();
             }
             else if (Directory.Exists(Values.Instance.PathConfig + "\\Config"))
             {
