@@ -129,4 +129,10 @@
     <Resource Include="Interface\pictures\équipe.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Interface\ProgressBar_fr.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

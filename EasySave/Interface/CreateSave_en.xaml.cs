@@ -24,7 +24,6 @@ namespace EasySave
         public CreateSave_en()
         {
             InitializeComponent();
-            TargetFile.Text = Values.Instance.PathTarget;
             TargetFiles.Text = Values.Instance.PathTarget;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -84,15 +83,37 @@ namespace EasySave
                 this.Topmost = true;
             }
         }
-        private void SaveFiles(object sender, RoutedEventArgs e)
+        private void ListSaveFiles(object sender, RoutedEventArgs e)
         {
-            CreateSave save = new CreateSave();
-            save.SaveFiles(SourceFiles.Text, TargetFiles.Text);
+            if (SourceFile.Text == "" & SourceFiles.Text == "")
+            {
+                MessageBox.Show("Source file needed.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else if (SourceFile.Text != "" & SourceFiles.Text != "")
+            {
+                MessageBox.Show("Complete only one source path.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
+                SourceFiles.Text = "";
+                SourceFile.Text = "";
+            }
+            else if (SourceFile.Text == "" & SourceFiles.Text != "")
+            {
+                CreateSave save = new CreateSave();
+                save.SaveFiles(SourceFiles.Text, TargetFiles.Text);
+                SourceFiles.Text = "";
+                SourceFile.Text = "";
+            }
+            else if (SourceFile.Text != "" & SourceFiles.Text == "")
+            {
+                CreateSave save = new CreateSave();
+                save.SaveFiles(SourceFile.Text, TargetFiles.Text);
+                SourceFiles.Text = "";
+                SourceFile.Text = "";
+            }
         }
         private void ClearFiles(object sender, RoutedEventArgs e)
         {
             SourceFiles.Text = "";
-            TargetFiles.Text = "";
+            SourceFile.Text = "";
         }
         private void SourceFolderFile(object sender, RoutedEventArgs e)
         {
@@ -104,32 +125,18 @@ namespace EasySave
                 this.Topmost = true;
             }
         }
-        private void TargetFolderFile(object sender, RoutedEventArgs e)
-        {
-            var dialog = new CommonOpenFileDialog();
-            dialog.IsFolderPicker = true;
-            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
-            {
-                TargetFile.Text = dialog.FileName;
-                this.Topmost = true;
-            }
-        }
-        private void SaveFile(object sender, RoutedEventArgs e)
-        {
-            CreateSave save = new CreateSave();
-            save.SaveFile(SourceFile.Text, TargetFile.Text);
-        }
-        private void ClearFile(object sender, RoutedEventArgs e)
-        {
-            SourceFile.Text = "";
-            TargetFile.Text = "";
-        }
         private void Config_Click(object sender, RoutedEventArgs e)
         {
             Config_en window = new Config_en();
             window.Top = this.Top + 100;
             window.Left = this.Left + 250;
             window.Show();
+        }
+
+        private void CreateSave(object sender, RoutedEventArgs e)
+        {
+            CreateSave save = new CreateSave();
+            save.LaunchSave();
         }
     }
 }

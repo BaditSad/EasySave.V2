@@ -17,9 +17,9 @@ namespace EasySave
     /// <summary>
     /// Logique d'interaction pour ProgressBar.xaml
     /// </summary>
-    public partial class ProgressBar : Window
+    public partial class ProgressBar_fr : Window
     {
-        public ProgressBar()
+        public ProgressBar_fr()
         {
             InitializeComponent();
         }

@@ -1,11 +1,11 @@
-﻿<Window x:Class="EasySave.ProgressBar"
+﻿<Window x:Class="EasySave.ProgressBar_fr"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySave"
         mc:Ignorable="d"
-        Title="ProgressBar" Height="268" Width="300" Background="#FF3762CC" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize">
+        Title="ProgressBar_fr" Height="268" Width="300" Background="#FF3762CC" WindowStyle="None" Loaded="Window_Loaded" IsHitTestVisible="True" ResizeMode="NoResize">
     <Grid MouseDown="WindowsBar_MouseDown" Background="#FF3762CC">
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="288" Fill="White" Margin="0,18,0,0" Height="87" VerticalAlignment="Top"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="160" Fill="White" Margin="15,28,0,0"/>
@@ -28,7 +28,7 @@
             </Button.Background>
         </Button>
         <Label Content="Statut :" HorizontalAlignment="Left" Margin="15,29,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="press play to start" HorizontalAlignment="Left" Margin="56,29,0,0" VerticalAlignment="Top" Width="113" Foreground="White" Background="{x:Null}"/>
+        <Label Content="play pour démarrer" HorizontalAlignment="Left" Margin="56,29,0,0" VerticalAlignment="Top" Width="124" Foreground="White" Background="{x:Null}"/>
         <TextBox VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" Height="142"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="280" Fill="White" Margin="0,6,0,0" Height="4" VerticalAlignment="Top"/>
         <Rectangle MouseDown="WindowsBar_MouseDown" RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="288" Fill="White" Margin="0,3,0,0" Height="10" VerticalAlignment="Top"/>

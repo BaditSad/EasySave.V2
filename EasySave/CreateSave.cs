@@ -19,5 +19,9 @@ namespace EasySave
         {
 
         }
+        public void LaunchSave()
+        {
+
+        }
     }
 }
