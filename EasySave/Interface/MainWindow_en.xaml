@@ -42,6 +42,7 @@
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/CREATE_SAVE.png"/>
             </Button.Background>
+            
         </Button>
         <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="347,138,0,0" VerticalAlignment="Top" Height="96" Width="256" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>

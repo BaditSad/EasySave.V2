@@ -30,19 +30,19 @@ namespace EasySave
             if(!File.Exists(Values.Instance.PathConfig + "\\Dailylog\\Log.json"))
             {
                 StreamWriter log = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
-                log.WriteLine(Values.Instance.PathTarget);
+                log.WriteLine("");
                 log.Close();
             }
             if (!File.Exists(Values.Instance.PathConfig + "\\Dailylog\\Log.xml"))
             {
                 StreamWriter log = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
-                log.WriteLine(Values.Instance.PathTarget);
+                log.WriteLine("");
                 log.Close();
             }
             if (!File.Exists(Values.Instance.PathConfig + "\\Statelog\\Statelog.json"))
             {
                 StreamWriter state = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json");
-                state.WriteLine(Values.Instance.PathTarget);
+                state.WriteLine("");
                 state.Close();
             }
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Path.json"))

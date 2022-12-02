@@ -75,21 +75,26 @@
         </Button>
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
         <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="238" VerticalAlignment="Top" Width="610" Fill="White" Margin="36,62,0,0"/>
-        <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="256" Fill="White" Margin="365,136,0,0"/>
-        <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="256" Fill="White" Margin="61,133,0,0"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="555,165,0,0" VerticalAlignment="Top" Width="38" Fill="#FF66F8F9"/>
-        <Button Content="Ouvrir" Style="{StaticResource defaultButtonStyle}" Click="OpenExt" HorizontalAlignment="Left" Margin="557,167,0,0" VerticalAlignment="Top" Width="34" Background="#FF3FABE0" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" Padding="1,1,1,2" BorderThickness="2,2,2,2"/>
-        <Label Content="Extensions à ne pas crypter :" HorizontalAlignment="Left" Margin="388,162,0,0" VerticalAlignment="Top" Width="162" Foreground="White"/>
-        <Label Content="Sélectionner un dossier :" HorizontalAlignment="Left" Margin="71,133,0,0" VerticalAlignment="Top" Width="153" Foreground="White"/>
-        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,164,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="271,138,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>
-        <Button Content="..." Click="CryptFolderFiles"  HorizontalAlignment="Left" Margin="273,140,0,0" VerticalAlignment="Top" Width="23" Style="{StaticResource defaultButtonStyle}" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
-        <TextBox HorizontalAlignment="Left" Margin="76,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="Black" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="Black" MaxHeight="17.96"/>
-        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="235,227,0,0" VerticalAlignment="Top" Height="66" Width="212" Click="Crypt_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="256" Fill="White" Margin="365,127,0,0"/>
+        <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="256" Fill="White" Margin="61,124,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="555,156,0,0" VerticalAlignment="Top" Width="38" Fill="#FF66F8F9"/>
+        <Button Content="Ouvrir" Style="{StaticResource defaultButtonStyle}" Click="OpenExt" HorizontalAlignment="Left" Margin="557,158,0,0" VerticalAlignment="Top" Width="34" Background="#FF3FABE0" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" Padding="1,1,1,2" BorderThickness="2,2,2,2"/>
+        <Label Content="Extensions à ne pas crypter :" HorizontalAlignment="Left" Margin="388,153,0,0" VerticalAlignment="Top" Width="162" Foreground="White"/>
+        <Label Content="Sélectionner un dossier :" HorizontalAlignment="Left" Margin="71,124,0,0" VerticalAlignment="Top" Width="153" Foreground="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,155,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="271,129,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>
+        <Button Content="..." Click="CryptFolderFiles"  HorizontalAlignment="Left" Margin="273,131,0,0" VerticalAlignment="Top" Width="23" Style="{StaticResource defaultButtonStyle}" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
+        <TextBox Name="TextBox" HorizontalAlignment="Left" Margin="76,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="#FF3762CC" MaxHeight="17.96"/>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="105,225,0,0" VerticalAlignment="Top" Height="66" Width="212" Click="Crypt_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/CRYPTER.png"/>
             </Button.Background>
         </Button>
         <Image Source="/Interface/pictures/CrypterMain.png" HorizontalAlignment="Left" Height="79" Margin="26,40,0,0" VerticalAlignment="Top" Width="258"/>
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="365,225,0,0" VerticalAlignment="Top" Height="66" Width="212" Click="Clear_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/NETTOYER.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

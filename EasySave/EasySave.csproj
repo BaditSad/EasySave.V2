@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Interface\pictures\eclair.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -62,6 +63,10 @@
     <None Remove="minimize.png" />
     <None Remove="SHOW_SAVES.png" />
     <None Remove="united-kingdom.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Interface\pictures\eclair.ico" />
   </ItemGroup>
 
   <ItemGroup>

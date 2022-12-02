@@ -13,22 +13,48 @@ namespace EasySave
     {
         public void Log()
         {
-            if (File.Exists(Values.Instance.PathConfig + "\\Dailylog\\Log.json"))
+            string dataLog;
+            StreamReader readLog = new StreamReader(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
+            dataLog = readLog.ReadToEnd();
+            readLog.Close();
+            if (dataLog == "")
             {
-                if (MessageBox.Show("Reset EasySave ?", "Save file", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                if (Values.Instance.Lang == "en")
                 {
-                    File.Delete(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
+                    if (MessageBox.Show("Reset log ?", "Save file", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                    {
+
+                        StreamWriter json = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
+                        json.WriteLine("");
+                        json.Close();
+                        StreamWriter xml = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
+                        xml.WriteLine("");
+                        xml.Close();
+                    }
+                }
+                else if (Values.Instance.Lang == "fr")
+                {
+                    if (MessageBox.Show("Reset logs ?", "Save file", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                    {
+
+                        StreamWriter json = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
+                        json.WriteLine("");
+                        json.Close();
+                        StreamWriter xml = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
+                        xml.WriteLine("");
+                        xml.Close();
+                    }
                 }
             }
             else
             {
                 if (Values.Instance.Lang == "en")
                 {
-                    MessageBox.Show("EasySave already reset.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Log already clean.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
                 if (Values.Instance.Lang == "fr")
                 {
-                    MessageBox.Show("Easy Save déjà réinitialisé.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Logs déjà supprimé.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }

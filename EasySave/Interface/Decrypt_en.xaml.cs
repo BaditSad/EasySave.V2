@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace EasySave
         public Decrypt_en()
         {
             InitializeComponent();
+            TextBox.Text = Values.Instance.PathTarget;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -70,17 +72,30 @@ namespace EasySave
 
         private void OpenExt(object sender, RoutedEventArgs e)
         {
-
+            OpenExtFile open = new OpenExtFile();
+            open.OpenFile();
         }
 
         private void CryptFolderFiles(object sender, RoutedEventArgs e)
         {
-
+            var dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                TextBox.Text = dialog.FileName;
+                this.Topmost = true;
+            }
         }
 
         private void Decrypt_Click(object sender, RoutedEventArgs e)
         {
+            Decrypt encrypt = new Decrypt();
+            encrypt.DecryptFolder(TextBox.Text);
+        }
 
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            TextBox.Text = "";
         }
     }
 }

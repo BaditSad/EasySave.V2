@@ -11,6 +11,9 @@ namespace EasySave
 {
     internal class Encrypt
     {
-        
+        public void encryptFolder(string path)
+        {
+
+        }
     }
 }

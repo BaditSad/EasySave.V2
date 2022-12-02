@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace EasySave
 {
-    internal class Decrypt
+    internal class OpenExtFile
     {
-        public void DecryptFolder(string path)
+        public void OpenFile()
         {
-
+            Process.Start(Values.Instance.PathConfig + "\\Config\\Ext.json");
         }
     }
 }
