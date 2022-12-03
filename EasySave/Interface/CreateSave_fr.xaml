@@ -36,7 +36,8 @@
         <Grid.Background>
             <ImageBrush x:Name="Background_image" ImageSource="/Interface/pictures/Background_1.png"/>
         </Grid.Background>
-        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="93" Margin="52,201,0,0" VerticalAlignment="Top" Width="586" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="93" Margin="52,201,0,0" VerticalAlignment="Top" Width="271" Fill="White"/>
+        <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="93" Margin="366,201,0,0" VerticalAlignment="Top" Width="271" Fill="White"/>
         <Rectangle Name="WindowsBar" MouseDown="WindowsBar_MouseDown" Opacity="0.1" HorizontalAlignment="Left" Height="24" Margin="18,16,0,0" VerticalAlignment="Top" Width="650" Fill="White" RadiusX="10" RadiusY="10.9"/>
         <Button Content="Close_Button" Style="{StaticResource defaultButtonStyle}" Opacity="0.8" HorizontalAlignment="Left" Margin="636,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="Close_Click" Height="20">
             <Button.Background>
@@ -98,19 +99,19 @@
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
         <Image Source="/Interface/pictures/SAUVEGARDE_FICHIERS.png" HorizontalAlignment="Left" Height="58" Margin="43,47,0,0" VerticalAlignment="Top" Width="272"/>
         <Image Source="/Interface/pictures/SAUVEGARDE_FICHIER.png" HorizontalAlignment="Left" Height="53" Margin="355,48,0,0" VerticalAlignment="Top" Width="277"/>
-        <Button Content="..." Click="ListSaveFiles" HorizontalAlignment="Left" Margin="366,210,0,0" VerticalAlignment="Top" Width="124" Height="38" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}" RenderTransformOrigin="0.871,-0.649">
+        <Button Content="..." Click="ListSaveFiles" HorizontalAlignment="Left" Margin="371,212,0,0" VerticalAlignment="Top" Width="129" Height="36" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}" RenderTransformOrigin="0.871,-0.649">
             <Button.Background>
-                <ImageBrush ImageSource="/Interface/pictures/SAUVEGARDER.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/AJOUTERALALISTE.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Click="ClearFiles" HorizontalAlignment="Left" Margin="503,212,0,0" VerticalAlignment="Top" Width="123" Height="38" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+        <Button Content="" Click="ClearFiles" HorizontalAlignment="Left" Margin="505,212,0,0" VerticalAlignment="Top" Width="126" Height="38" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/NETTOYER.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Click="CreateSave" HorizontalAlignment="Left" Margin="428,248,0,0" VerticalAlignment="Top" Width="144" Height="42" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+        <Button Content="" Click="CreateSave" HorizontalAlignment="Left" Margin="422,253,0,0" VerticalAlignment="Top" Width="159" Height="36" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
-                <ImageBrush ImageSource="/Interface/pictures/CREATE SAVE.png"/>
+                <ImageBrush ImageSource="/Interface/pictures/CREER SAUVEGARDE.png"/>
             </Button.Background>
         </Button>
 

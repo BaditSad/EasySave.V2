@@ -135,8 +135,10 @@ namespace EasySave
 
         private void CreateSave(object sender, RoutedEventArgs e)
         {
-            CreateSave save = new CreateSave();
-            save.LaunchSave();
+            Save_fr window = new Save_fr();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            window.Show();
         }
     }
 }

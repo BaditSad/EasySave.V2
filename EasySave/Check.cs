@@ -27,6 +27,12 @@ namespace EasySave
                 Directory.CreateDirectory(Values.Instance.PathConfig + "\\Statelog");
             }
             //Create files
+            if(!File.Exists(Values.Instance.PathConfig + "\\Config\\Save.json"))
+            {
+                StreamWriter save = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.json");
+                save.WriteLine("");
+                save.Close();
+            }
             if(!File.Exists(Values.Instance.PathConfig + "\\Dailylog\\Log.json"))
             {
                 StreamWriter log = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
@@ -72,6 +78,12 @@ namespace EasySave
                 file.Close();
             }
             //Reader files
+            if (File.Exists(Values.Instance.PathConfig + "\\Config\\Save.json"))
+            {
+                StreamReader save = new StreamReader(Values.Instance.PathConfig + "\\Config\\Save.json");
+                Values.Instance.Save = save.ReadToEnd();
+                save.Close();
+            }
             if (File.Exists(Values.Instance.PathConfig + "\\Config\\Lang.json"))
             {
                 StreamReader lang = new StreamReader(Values.Instance.PathConfig + "\\Config\\Lang.json");
