@@ -139,6 +139,7 @@ namespace EasySave
             window.Top = this.Top;
             window.Left = this.Left;
             window.Show();
+            this.Close();
         }
     }
 }

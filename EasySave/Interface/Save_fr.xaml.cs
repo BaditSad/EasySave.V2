@@ -1,13 +1,10 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,16 +14,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 
 namespace EasySave
 {
     /// <summary>
     /// Logique d'interaction pour CreateSave.xaml
     /// </summary>
-    public partial class Save_en : Window
+    public partial class Save_fr : Window
     {
-        public Save_en()
+        public Save_fr()
         {
             InitializeComponent();
             dgvData.ItemsSource = LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
@@ -58,15 +54,15 @@ namespace EasySave
         }
         private void French_Click(object sender, RoutedEventArgs e)
         {
-            Save_fr window = new Save_fr();
+            //Nothing
+        }
+        private void English_Click(object sender, RoutedEventArgs e)
+        {
+            Save_en window = new Save_en();
             window.Top = this.Top;
             window.Left = this.Left;
             window.Show();
             this.Close();
-        }
-        private void English_Click(object sender, RoutedEventArgs e)
-        {
-            //Nothing
         }
         private void Config_Click(object sender, RoutedEventArgs e)
         {
@@ -85,7 +81,7 @@ namespace EasySave
         private void Delete(object sender, RoutedEventArgs e)
         {
             var line_to_edit = dgvData.SelectedIndex;
-            string newText = null;
+            string newText = ";;";
             string fileName = Values.Instance.PathConfig + "\\Config\\Save.csv";
             string[] arrLine = File.ReadAllLines(fileName);
             arrLine[line_to_edit - 1] = newText;

@@ -27,28 +27,24 @@ namespace EasySave
                 Directory.CreateDirectory(Values.Instance.PathConfig + "\\Statelog");
             }
             //Create files
-            if(!File.Exists(Values.Instance.PathConfig + "\\Config\\Save.json"))
+            if(!File.Exists(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
-                StreamWriter save = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.json");
-                save.WriteLine("");
+                StreamWriter save = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv");
                 save.Close();
             }
             if(!File.Exists(Values.Instance.PathConfig + "\\Dailylog\\Log.json"))
             {
                 StreamWriter log = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
-                log.WriteLine("");
                 log.Close();
             }
             if (!File.Exists(Values.Instance.PathConfig + "\\Dailylog\\Log.xml"))
             {
                 StreamWriter log = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
-                log.WriteLine("");
                 log.Close();
             }
             if (!File.Exists(Values.Instance.PathConfig + "\\Statelog\\Statelog.json"))
             {
                 StreamWriter state = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json");
-                state.WriteLine("");
                 state.Close();
             }
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Path.json"))
@@ -67,7 +63,6 @@ namespace EasySave
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Ext.json"))
             {
                 StreamWriter ext = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Ext.json");
-                ext.WriteLine("");
                 ext.Close();
             }
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\File.json"))
@@ -78,12 +73,6 @@ namespace EasySave
                 file.Close();
             }
             //Reader files
-            if (File.Exists(Values.Instance.PathConfig + "\\Config\\Save.json"))
-            {
-                StreamReader save = new StreamReader(Values.Instance.PathConfig + "\\Config\\Save.json");
-                Values.Instance.Save = save.ReadToEnd();
-                save.Close();
-            }
             if (File.Exists(Values.Instance.PathConfig + "\\Config\\Lang.json"))
             {
                 StreamReader lang = new StreamReader(Values.Instance.PathConfig + "\\Config\\Lang.json");

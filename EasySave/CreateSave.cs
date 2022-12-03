@@ -19,32 +19,18 @@ namespace EasySave
                 {
                     foreach (string pathFile in Directory.GetFiles(_sourcePath))
                     {
-                        StreamReader ReadSaveList = new StreamReader(Values.Instance.PathConfig + "\\Config\\Save.json");
-                        Values.Instance.Save = ReadSaveList.ReadToEnd();
-                        ReadSaveList.Close();
-                        StreamWriter WriteSaveList = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.json");
-                        WriteSaveList.Write(Values.Instance.Save);
-                        WriteSaveList.WriteLine("\"" + pathFile + " --> " + _targetPath + "\": {");//id
-                        WriteSaveList.WriteLine("\"date\": \"" + DateTime.Now + "\",");//date
-                        WriteSaveList.WriteLine("\"source\": \"" + pathFile + "\",");//source
-                        WriteSaveList.WriteLine("\"target\": \"" + _targetPath + "\"");//target
-                        WriteSaveList.WriteLine("}, {");
-                        WriteSaveList.Close();
+                        using (StreamWriter file = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv", true))
+                        {
+                            file.WriteLine(_sourcePath + ";" + _targetPath + ";" + DateTime.Now);
+                        }
                     }
                 }
                 else if (File.Exists(_sourcePath))
                 {
-                    StreamReader ReadSaveList = new StreamReader(Values.Instance.PathConfig + "\\Config\\Save.json");
-                    Values.Instance.Save = ReadSaveList.ReadToEnd();
-                    ReadSaveList.Close();
-                    StreamWriter WriteSaveList = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.json");
-                    WriteSaveList.Write(Values.Instance.Save);
-                    WriteSaveList.WriteLine("\"" + _sourcePath + " --> " + _targetPath + "\": {");//id
-                    WriteSaveList.WriteLine("\"date\": \"" + DateTime.Now + "\",");//date
-                    WriteSaveList.WriteLine("\"source\": \"" + _sourcePath + "\",");//source
-                    WriteSaveList.WriteLine("\"target\": \"" + _targetPath + "\"");//target
-                    WriteSaveList.WriteLine("}, {");
-                    WriteSaveList.Close();
+                    using (StreamWriter file = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv", true))
+                    {
+                        file.WriteLine(_sourcePath + ";" + _targetPath + ";" + DateTime.Now);
+                    }
                 }
                 else
                 {

@@ -20,10 +20,14 @@
     <None Remove="Engrenage.png" />
     <None Remove="france.png" />
     <None Remove="gear.png" />
+    <None Remove="Interface\pictures\ADDTOLIST.png" />
+    <None Remove="Interface\pictures\AJOUTERALALISTE.png" />
+    <None Remove="Interface\pictures\BACK.png" />
     <None Remove="Interface\pictures\cesi.png" />
     <None Remove="Interface\pictures\CLEAR.png" />
     <None Remove="Interface\pictures\CMD.png" />
     <None Remove="Interface\pictures\Collab.png" />
+    <None Remove="Interface\pictures\CREER SAUVEGARDE.png" />
     <None Remove="Interface\pictures\CREER_SAUVEGARDE.png" />
     <None Remove="Interface\pictures\CRYPTER.png" />
     <None Remove="Interface\pictures\CrypterMain.png" />
@@ -37,6 +41,7 @@
     <None Remove="Interface\pictures\DecryptMain.png" />
     <None Remove="Interface\pictures\DecryptTitle.png" />
     <None Remove="Interface\pictures\DecryptTtitle.png" />
+    <None Remove="Interface\pictures\DELETE.png" />
     <None Remove="Interface\pictures\eclair.png" />
     <None Remove="Interface\pictures\ENCRYPT.png" />
     <None Remove="Interface\pictures\EncryptMain.png" />
@@ -46,13 +51,18 @@
     <None Remove="Interface\pictures\info.png" />
     <None Remove="Interface\pictures\LOG_TERMINAL.png" />
     <None Remove="Interface\pictures\NETTOYER.png" />
+    <None Remove="Interface\pictures\pause.png" />
+    <None Remove="Interface\pictures\play.png" />
     <None Remove="Interface\pictures\prosoft.png" />
+    <None Remove="Interface\pictures\RETOUR.png" />
     <None Remove="Interface\pictures\SAUVEGARDER.png" />
     <None Remove="Interface\pictures\SAUVEGARDE_FICHIER.png" />
     <None Remove="Interface\pictures\SAUVEGARDE_FICHIERS.png" />
     <None Remove="Interface\pictures\SAVE.png" />
     <None Remove="Interface\pictures\SAVE_FILE.png" />
     <None Remove="Interface\pictures\SAVE_FILES.png" />
+    <None Remove="Interface\pictures\stop.png" />
+    <None Remove="Interface\pictures\SUPPRIMER LIGNE.png" />
     <None Remove="Interface\pictures\Team.png" />
     <None Remove="Interface\pictures\TERMINAL_LOGS.png" />
     <None Remove="Interface\pictures\trash.png" />
@@ -79,6 +89,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Interface\pictures\ADDTOLIST.png" />
+    <Resource Include="Interface\pictures\AJOUTERALALISTE.png" />
+    <Resource Include="Interface\pictures\BACK.png" />
     <Resource Include="Interface\pictures\Background.png" />
     <Resource Include="Interface\pictures\Background_1.png" />
     <Resource Include="Interface\pictures\cesi.png" />
@@ -89,6 +102,7 @@
     <Resource Include="Interface\pictures\Collab.png" />
     <Resource Include="Interface\pictures\CREATE SAVE.png" />
     <Resource Include="Interface\pictures\CREATE_SAVE.png" />
+    <Resource Include="Interface\pictures\CREER SAUVEGARDE.png" />
     <Resource Include="Interface\pictures\CREER_SAUVEGARDE.png" />
     <Resource Include="Interface\pictures\CRYPTER.png" />
     <Resource Include="Interface\pictures\CrypterMain.png" />
@@ -99,6 +113,7 @@
     <Resource Include="Interface\pictures\DecrypterTitle.png" />
     <Resource Include="Interface\pictures\DecryptMain.png" />
     <Resource Include="Interface\pictures\DecryptTitle.png" />
+    <Resource Include="Interface\pictures\DELETE.png" />
     <Resource Include="Interface\pictures\EasySave-28-11-2022.png" />
     <Resource Include="Interface\pictures\eclair.png" />
     <Resource Include="Interface\pictures\ENCRYPT.png" />
@@ -114,7 +129,10 @@
     <Resource Include="Interface\pictures\minimize white.png" />
     <Resource Include="Interface\pictures\minimize.png" />
     <Resource Include="Interface\pictures\NETTOYER.png" />
+    <Resource Include="Interface\pictures\pause.png" />
+    <Resource Include="Interface\pictures\play.png" />
     <Resource Include="Interface\pictures\prosoft.png" />
+    <Resource Include="Interface\pictures\RETOUR.png" />
     <Resource Include="Interface\pictures\SAUVEGARDER.png" />
     <Resource Include="Interface\pictures\SAUVEGARDE_FICHIER.png" />
     <Resource Include="Interface\pictures\SAUVEGARDE_FICHIERS.png" />
@@ -122,6 +140,8 @@
     <Resource Include="Interface\pictures\SAVE_FILE.png" />
     <Resource Include="Interface\pictures\SAVE_FILES.png" />
     <Resource Include="Interface\pictures\SHOW_SAVES.png" />
+    <Resource Include="Interface\pictures\stop.png" />
+    <Resource Include="Interface\pictures\SUPPRIMER LIGNE.png" />
     <Resource Include="Interface\pictures\Team.png" />
     <Resource Include="Interface\pictures\TERMINAL_LOGS.png" />
     <Resource Include="Interface\pictures\trash.png" />
