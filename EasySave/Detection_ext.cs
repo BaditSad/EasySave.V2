@@ -9,8 +9,26 @@ using System.Windows;
 
 namespace EasySave
 {
-    internal class Decrypt
+    internal class Detection_ext
     {
+        // Detection if the extention exists
+        string[] extentions = Values.Instance.ext;
+        List<string> fileList = new List<string>();
         
+        public List<string> Detection(string[] fileNames)
+        {
+            for (int i = 0; i < fileNames.Length; i++)
+            {
+                for (int j = 0; j < extentions.Length; j++)
+                {
+                    if (fileNames[i].IndexOf(extentions[j]) > 0)
+                    {
+                        fileList.Add(fileNames[i]);
+                        break;
+                    }
+                }
+            }
+            return fileList;
+        }
     }
 }
