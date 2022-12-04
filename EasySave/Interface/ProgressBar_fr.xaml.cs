@@ -30,20 +30,23 @@ namespace EasySave
         {
             this.DragMove();
         }
-
         private void Button_play(object sender, RoutedEventArgs e)
         {
-
+            ProgressSave progress = new ProgressSave();
+            progress.SavePlay();
         }
 
         private void Button_pause(object sender, RoutedEventArgs e)
         {
-
+            ProgressSave progress = new ProgressSave();
+            progress.SavePause();
         }
 
         private void Button_stop(object sender, RoutedEventArgs e)
         {
-
+            ProgressSave progress = new ProgressSave();
+            progress.SaveStop();
+            this.Close();
         }
     }
 }

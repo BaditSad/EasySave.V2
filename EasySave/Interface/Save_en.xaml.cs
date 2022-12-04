@@ -78,17 +78,19 @@ namespace EasySave
 
         private void LaunchSave(object sender, RoutedEventArgs e)
         {
-            CreateSave save = new CreateSave();
-            save.LaunchSave();
+            ProgressBar_en window = new ProgressBar_en();
+            window.Top = this.Top + 100;
+            window.Left = this.Left + 250;
+            window.Show();
         }
 
         private void Delete(object sender, RoutedEventArgs e)
         {
             var line_to_edit = dgvData.SelectedIndex;
-            string newText = null;
+            string newText = ";;";
             string fileName = Values.Instance.PathConfig + "\\Config\\Save.csv";
             string[] arrLine = File.ReadAllLines(fileName);
-            arrLine[line_to_edit - 1] = newText;
+            arrLine[line_to_edit] = newText;
             File.WriteAllLines(fileName, arrLine);
             dgvData.ItemsSource = LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
         }
@@ -118,6 +120,13 @@ namespace EasySave
         }
         public List<SaveLineDataGridView> LoadDataGridView(string csvFile)
         {
+            var nonEmptyLines = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv")
+                        .Where(x => !x.Split(';')
+                                     .Take(2)
+                                     .Any(cell => string.IsNullOrWhiteSpace(cell))
+                         ).ToList();
+
+            File.WriteAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv", nonEmptyLines);
             var query = from l in File.ReadLines(csvFile)
                         let data = l.Split(';')
                         select new SaveLineDataGridView
