@@ -26,10 +26,6 @@ namespace EasySave
             {
                 Directory.CreateDirectory(Values.Instance.PathConfig + "\\Statelog");
             }
-            if (!Directory.Exists(Values.Instance.PathConfig + "\\Extensions"))
-            {
-                Directory.CreateDirectory(Values.Instance.PathConfig + "\\Extensions");
-            }
             //Create files
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {

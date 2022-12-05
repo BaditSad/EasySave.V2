@@ -38,13 +38,13 @@
         </Grid.Background>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="265" Margin="73,52,0,0" VerticalAlignment="Top" Width="548" Fill="White"/>
         <Image Source="/Interface/pictures/EasySave-28-11-2022.png" HorizontalAlignment="Left" Height="156" Margin="177,36,0,0" VerticalAlignment="Top" Width="426"/>
-        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="92,146,0,0" VerticalAlignment="Top" Height="88" Width="259" Click="Create_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="132,151,0,0" VerticalAlignment="Top" Height="74" Width="201" Click="Create_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/CREATE_SAVE.png"/>
             </Button.Background>
-            
+
         </Button>
-        <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="347,138,0,0" VerticalAlignment="Top" Height="96" Width="256" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="366,146,0,0" VerticalAlignment="Top" Height="75" Width="201" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/SHOW_SAVES.png"/>
             </Button.Background>
@@ -88,12 +88,12 @@
                 <ImageBrush ImageSource="/Interface/pictures/info.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="103,239,0,0" VerticalAlignment="Top" Height="70" Width="231" Click="Crypt_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="137,239,0,0" VerticalAlignment="Top" Height="61" Width="181" Click="Crypt_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/EncryptTitle.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="356,236,0,0" VerticalAlignment="Top" Height="69" Width="227" Click="Decrypt_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Content="" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="366,236,0,0" VerticalAlignment="Top" Height="59" Width="183" Click="Decrypt_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/DecryptTitle.png"/>
             </Button.Background>
