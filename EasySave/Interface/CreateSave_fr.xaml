@@ -99,7 +99,7 @@
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
         <Image Source="/Interface/pictures/SAUVEGARDE_FICHIERS.png" HorizontalAlignment="Left" Height="58" Margin="43,47,0,0" VerticalAlignment="Top" Width="272"/>
         <Image Source="/Interface/pictures/SAUVEGARDE_FICHIER.png" HorizontalAlignment="Left" Height="53" Margin="355,48,0,0" VerticalAlignment="Top" Width="277"/>
-        <Button Content="..." Click="ListSaveFiles" HorizontalAlignment="Left" Margin="371,212,0,0" VerticalAlignment="Top" Width="129" Height="36" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}" RenderTransformOrigin="0.871,-0.649">
+        <Button Content="..." Click="ListSaveFiles" Name="AddToList" HorizontalAlignment="Left" Margin="371,212,0,0" VerticalAlignment="Top" Width="129" Height="36" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}" RenderTransformOrigin="0.871,-0.649">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/AJOUTERALALISTE.png"/>
             </Button.Background>
@@ -109,7 +109,7 @@
                 <ImageBrush ImageSource="/Interface/pictures/NETTOYER.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Click="CreateSave" HorizontalAlignment="Left" Margin="422,253,0,0" VerticalAlignment="Top" Width="159" Height="36" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+        <Button Content="" Click="CreateSave" Name="CreateSaveButton" HorizontalAlignment="Left" Margin="422,253,0,0" VerticalAlignment="Top" Width="159" Height="36" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/CREER SAUVEGARDE.png"/>
             </Button.Background>

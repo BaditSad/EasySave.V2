@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,6 +27,20 @@ namespace EasySave
         {
             InitializeComponent();
             TargetFiles.Text = Values.Instance.PathTarget;
+            refresh();
+        }
+        private void refresh()
+        {
+            if (new FileInfo(Values.Instance.PathConfig + "\\Config\\Save.csv").Length == 0)
+            {
+                CreateSaveButton.Opacity = 0.3;
+                CreateSaveButton.IsEnabled = false;
+            }
+            else
+            {
+                CreateSaveButton.Opacity = 1;
+                CreateSaveButton.IsEnabled = true;
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -101,6 +117,7 @@ namespace EasySave
                 save.SaveFiles(SourceFiles.Text, TargetFiles.Text);
                 SourceFiles.Text = "";
                 SourceFile.Text = "";
+                refresh();
             }
             else if (SourceFile.Text != "" & SourceFiles.Text == "")
             {
@@ -108,6 +125,7 @@ namespace EasySave
                 save.SaveFiles(SourceFile.Text, TargetFiles.Text);
                 SourceFiles.Text = "";
                 SourceFile.Text = "";
+                refresh();
             }
         }
         private void ClearFiles(object sender, RoutedEventArgs e)

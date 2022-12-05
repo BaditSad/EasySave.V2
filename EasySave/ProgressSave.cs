@@ -19,6 +19,8 @@ namespace EasySave
             ListSave list = new ListSave();
             foreach (var items in list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
+                var lines = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv");
+                File.WriteAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv", lines.Skip(1).ToArray());
                 Process[] cname = Process.GetProcessesByName("calc"); //ATTENTION LE NOM EST PAS BON
                 if (cname.Length == 0)
                 {
@@ -41,6 +43,7 @@ namespace EasySave
                     process.StartInfo.Arguments = string.Format("/c move {0} {1}", items.Source, items.Target);
                     process.StartInfo.FileName = "cmd.exe";
                     process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.CreateNoWindow = true;
                     process.Start();
                 }
             }

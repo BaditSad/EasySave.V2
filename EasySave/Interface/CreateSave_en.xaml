@@ -91,7 +91,7 @@
 
         <Button Content="..." Click="SourceFolderFile" HorizontalAlignment="Left" Margin="590,101,0,0" VerticalAlignment="Top" Width="23" Style="{StaticResource defaultButtonStyle}" Background="#FF3FABE0" BorderThickness="2,2,2,2" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9"/>
 
-        <Button Content="..." Click="ListSaveFiles" HorizontalAlignment="Left" Margin="372,210,0,0" VerticalAlignment="Top" Width="124" Height="33" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}" RenderTransformOrigin="0.871,-0.649">
+        <Button Content="..." Name="AddToList" Click="ListSaveFiles" HorizontalAlignment="Left" Margin="372,210,0,0" VerticalAlignment="Top" Width="124" Height="33" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}" RenderTransformOrigin="0.871,-0.649">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/ADDTOLIST.png"/>
             </Button.Background>
@@ -106,11 +106,11 @@
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,129,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="384,129,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
         <TextBox Name="SourceFiles" HorizontalAlignment="Left" Margin="76,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="#FF3762CC" MaxHeight="17.96"/>
-        <TextBox Name ="SourceFile"  HorizontalAlignment="Left" Margin="392,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="#FF3762CC" MaxHeight="17.96"/>
+        <TextBox Name ="SourceFile" HorizontalAlignment="Left" Margin="392,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Background="White" SelectionBrush="#FF3762CC" SelectionTextBrush="{x:Null}" BorderBrush="#FFB7B7B7" Foreground="#FF3762CC" MaxHeight="17.96"/>
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
         <Image Source="/Interface/pictures/SAVE_FILES.png" HorizontalAlignment="Left" Height="51" Margin="45,55,0,0" VerticalAlignment="Top" Width="152"/>
         <Image Source="/Interface/pictures/SAVE_FILE.png" HorizontalAlignment="Left" Height="51" Margin="360,55,0,0" VerticalAlignment="Top" Width="152"/>
-        <Button Content="" Click="CreateSave" HorizontalAlignment="Left" Margin="434,248,0,0" VerticalAlignment="Top" Width="144" Height="42" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+        <Button Content="" Name="CreateSaveButton" Click="CreateSave" HorizontalAlignment="Left" Margin="434,248,0,0" VerticalAlignment="Top" Width="144" Height="42" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/CREATE SAVE.png"/>
             </Button.Background>
