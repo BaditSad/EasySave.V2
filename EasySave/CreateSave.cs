@@ -15,21 +15,21 @@ namespace EasySave
         {
             if (Directory.Exists(_targetPath))
             {
-                if (Directory.Exists(_sourcePath))
+                if (File.Exists(_sourcePath))
+                {
+                    using (StreamWriter file = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv", true))
+                    {
+                        file.WriteLine(_sourcePath + ";" + _targetPath + ";" + DateTime.Now);
+                    }
+                }
+                else if (Directory.Exists(_sourcePath))
                 {
                     foreach (string pathFile in Directory.GetFiles(_sourcePath))
                     {
                         using (StreamWriter file = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv", true))
                         {
-                            file.WriteLine(_sourcePath + ";" + _targetPath + ";" + DateTime.Now);
+                            file.WriteLine(pathFile + ";" + _targetPath + ";" + DateTime.Now);
                         }
-                    }
-                }
-                else if (File.Exists(_sourcePath))
-                {
-                    using (StreamWriter file = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv", true))
-                    {
-                        file.WriteLine(_sourcePath + ";" + _targetPath + ";" + DateTime.Now);
                     }
                 }
                 else

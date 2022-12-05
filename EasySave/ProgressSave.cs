@@ -16,31 +16,32 @@ namespace EasySave
     {
         public void SavePlay()
         {
-            Process[] cname = Process.GetProcessesByName("calc");
-            if (cname.Length == 0)
+            ListSave list = new ListSave();
+            foreach (var items in list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
-                //Importation de la list ou creation si on peut pas l'inporter
-                //foreach(//Item in list)
-                //{
-                //    using (Process p = new Process())
-                //    {
-                //        p.StartInfo.Arguments = string.Format("/C ROBOCOPY {0} {1} {2}",
-                //                sourceDirName, destDirName, fileName);
-                //        p.StartInfo.FileName = "CMD.EXE";
-                //        p.StartInfo.UseShellExecute = false;
-                //        p.Start();
-                //    }
-                //}
-            }
-            else
-            {
-                if (Values.Instance.Lang == "en")
+                Process[] cname = Process.GetProcessesByName("calc"); //ATTENTION LE NOM EST PAS BON
+                if (cname.Length == 0)
                 {
-                    MessageBox.Show("Calculator is running. Close it to continue.");
+                    //Nothing
                 }
-                if (Values.Instance.Lang == "fr")
+                else
                 {
-                    MessageBox.Show("Calculatrice est ouvert. Fermé le pour continuer.");
+                    if (Values.Instance.Lang == "en")
+                    {
+                        MessageBox.Show("Calculator is running. Close it to continue.");
+                    }
+                    else if (Values.Instance.Lang == "fr")
+                    {
+                        MessageBox.Show("Calculatrice est ouvert. Fermé le pour continuer.");
+                    }
+                    return;
+                }
+                using (Process process = new Process())
+                {
+                    process.StartInfo.Arguments = string.Format("/c move {0} {1}", items.Source, items.Target);
+                    process.StartInfo.FileName = "cmd.exe";
+                    process.StartInfo.UseShellExecute = false;
+                    process.Start();
                 }
             }
         }

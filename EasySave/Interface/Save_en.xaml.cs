@@ -29,7 +29,8 @@ namespace EasySave
         public Save_en()
         {
             InitializeComponent();
-            dgvData.ItemsSource = LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
+            ListSave list = new ListSave();
+            dgvData.ItemsSource = list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -92,7 +93,8 @@ namespace EasySave
             string[] arrLine = File.ReadAllLines(fileName);
             arrLine[line_to_edit] = newText;
             File.WriteAllLines(fileName, arrLine);
-            dgvData.ItemsSource = LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
+            ListSave list = new ListSave();
+            dgvData.ItemsSource = list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
         }
 
         private void Back(object sender, RoutedEventArgs e)
@@ -102,40 +104,6 @@ namespace EasySave
             window.Left = this.Left;
             window.Show();
             this.Close();
-        }
-        public class SaveLineDataGridView
-        {
-            public string Date
-            {
-                get; set;
-            }
-            public string Source
-            {
-                get; set;
-            }
-            public string Target
-            {
-                get; set;
-            }
-        }
-        public List<SaveLineDataGridView> LoadDataGridView(string csvFile)
-        {
-            var nonEmptyLines = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv")
-                        .Where(x => !x.Split(';')
-                                     .Take(2)
-                                     .Any(cell => string.IsNullOrWhiteSpace(cell))
-                         ).ToList();
-
-            File.WriteAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv", nonEmptyLines);
-            var query = from l in File.ReadLines(csvFile)
-                        let data = l.Split(';')
-                        select new SaveLineDataGridView
-                        {
-                            Source = data[0],
-                            Target = data[1],
-                            Date = data[2]
-                        };
-            return query.ToList();
         }
     }
 }
