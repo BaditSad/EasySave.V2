@@ -22,6 +22,10 @@ namespace EasySave
         public ProgressBar_en()
         {
             InitializeComponent();
+            PauseButton.IsEnabled = false;
+            PauseButton.Opacity = 0.3;
+            PlayButton.IsEnabled = true;
+            PlayButton.Opacity = 1;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -35,12 +39,20 @@ namespace EasySave
         {
             ProgressSave progress = new ProgressSave();
             progress.SavePlay();
+            PlayButton.IsEnabled = false;
+            PlayButton.Opacity = 0.3;
+            PauseButton.IsEnabled = true;
+            PauseButton.Opacity = 1;
         }
 
         private void Button_pause(object sender, RoutedEventArgs e)
         {
             ProgressSave progress = new ProgressSave();
             progress.SavePause();
+            PauseButton.IsEnabled = false;
+            PauseButton.Opacity = 0.3;
+            PlayButton.IsEnabled = true;
+            PlayButton.Opacity = 1;
         }
 
         private void Button_stop(object sender, RoutedEventArgs e)

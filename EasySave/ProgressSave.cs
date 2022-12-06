@@ -44,9 +44,9 @@ namespace EasySave
                     {
                         MessageBox.Show("Calculatrice est ouvert. Fermé le pour continuer.", "EasySave", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
-                    return;
                 }
             }
+            
         }
         public void SavePause()
         {
