@@ -45,8 +45,10 @@ namespace EasySave
         private void Button_stop(object sender, RoutedEventArgs e)
         {
             ProgressSave progress = new ProgressSave();
-            progress.SaveStop();
-            this.Close();
+            if (progress.SaveStop() == true)
+            {
+                this.Close();
+            }
         }
     }
 }

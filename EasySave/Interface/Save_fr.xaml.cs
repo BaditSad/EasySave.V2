@@ -27,9 +27,16 @@ namespace EasySave
             InitializeComponent();
             ListSave list = new ListSave();
             dgvData.ItemsSource = list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
+            DeleteButton.IsEnabled = false;
+            DeleteButton.Opacity = 0.3;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+        }
+        private void CellsChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DeleteButton.IsEnabled = true;
+            DeleteButton.Opacity = 1;
         }
         private void WindowsBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -91,6 +98,13 @@ namespace EasySave
             File.WriteAllLines(fileName, arrLine);
             ListSave list = new ListSave();
             dgvData.ItemsSource = list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
+            if (dgvData.Items.Count == 0)
+            {
+                DeleteButton.IsEnabled = false;
+                DeleteButton.Opacity = 0.3;
+                SaveButton.IsEnabled = false;
+                SaveButton.Opacity = 0.3;
+            }
         }
 
         private void Back(object sender, RoutedEventArgs e)

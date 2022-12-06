@@ -74,7 +74,7 @@
             </Button.Background>
         </Button>
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
-        <DataGrid x:Name="dgvData" ColumnWidth="*" IsReadOnly="True" SelectionMode="Single" Margin="30,45,144,181" Background="White" Foreground="#FF3762CC" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" Cursor="Arrow" HorizontalGridLinesBrush="#FF577BC2" VerticalGridLinesBrush="#FF577BC2">
+        <DataGrid x:Name="dgvData" SelectionChanged="CellsChanged" ColumnWidth="*" IsReadOnly="True" SelectionMode="Single" Margin="30,45,144,181" Background="White" Foreground="#FF3762CC" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" Cursor="Arrow" HorizontalGridLinesBrush="#FF577BC2" VerticalGridLinesBrush="#FF577BC2">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FFFC1C0E" />
                 <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="White" />
@@ -103,12 +103,12 @@
                 <ImageBrush ImageSource="/Interface/pictures/BACK.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Click="Delete" HorizontalAlignment="Left" Margin="280,278,0,0" VerticalAlignment="Top" Width="126" Height="38" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+        <Button Content="" Click="Delete" Name="DeleteButton" HorizontalAlignment="Left" Margin="280,278,0,0" VerticalAlignment="Top" Width="126" Height="38" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/DELETE.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Click="LaunchSave" HorizontalAlignment="Left" Margin="481,278,0,0" VerticalAlignment="Top" Width="127" Height="38" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
+        <Button Content="" Click="LaunchSave" Name="SaveButton" HorizontalAlignment="Left" Margin="481,278,0,0" VerticalAlignment="Top" Width="127" Height="38" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{StaticResource defaultButtonStyle}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/SAVE.png"/>
             </Button.Background>
