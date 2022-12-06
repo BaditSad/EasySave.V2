@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
+using System.IO;
 
 namespace EasySave
 {
@@ -24,6 +25,16 @@ namespace EasySave
         public MainWindow_fr()
         {
             InitializeComponent();
+            if (new FileInfo(Values.Instance.PathConfig + "\\Dailylog\\Log.json").Length == 0)
+            {
+                ShowSaveButton.IsEnabled = false;
+                ShowSaveButton.Opacity = 0.3;
+            }
+            else
+            {
+                ShowSaveButton.IsEnabled = true;
+                ShowSaveButton.Opacity = 1;
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

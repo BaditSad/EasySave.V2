@@ -21,6 +21,16 @@ namespace EasySave
             foreach (var items in list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
                 var lines = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv");
+                if (Values.Instance.Lang == "en")
+                {
+                    ProgressBar_en saveFile = new ProgressBar_en();
+                    saveFile.FileSavedShow(File.ReadLines(Values.Instance.PathConfig + "\\Config\\Save.csv").First());
+                }
+                else if (Values.Instance.Lang == "fr")
+                {
+                    ProgressBar_fr saveFile = new ProgressBar_fr();
+                    saveFile.FileSavedShow(File.ReadLines(Values.Instance.PathConfig + "\\Config\\Save.csv").First());
+                }
                 File.WriteAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv", lines.Skip(1).ToArray());
                 Process[] cname = Process.GetProcessesByName("CalculatorApp");
                 if (cname.Length == 0)

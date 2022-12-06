@@ -12,6 +12,8 @@ namespace EasySave
         public void ChekFolder()
         {
             //Create folders
+            Values.Instance.FileSaved = 0;
+            Values.Instance.FileToSave = 0;
             Values.Instance.PathConfig = Directory.GetCurrentDirectory();
             if (!Directory.Exists(Values.Instance.PathConfig + "\\Config"))
             {

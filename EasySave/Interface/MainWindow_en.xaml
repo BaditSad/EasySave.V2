@@ -44,7 +44,7 @@
             </Button.Background>
 
         </Button>
-        <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="366,146,0,0" VerticalAlignment="Top" Height="75" Width="201" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Content="SHOW" Name="ShowSaveButton" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="366,146,0,0" VerticalAlignment="Top" Height="75" Width="201" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/SHOW_SAVES.png"/>
             </Button.Background>

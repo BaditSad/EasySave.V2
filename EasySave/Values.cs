@@ -24,6 +24,14 @@ namespace EasySave
         {
             get; set;
         }
+        public int FileToSave
+        {
+            get; set;
+        }
+        public int FileSaved
+        {
+            get; set;
+        }
         private Values() { }
         public static readonly Values Instance = new Values();
     }

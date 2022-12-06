@@ -43,7 +43,7 @@
                 <ImageBrush ImageSource="/Interface/pictures/CREER_SAUVEGARDE.png"/>
             </Button.Background>
         </Button>
-        <Button Content="SHOW" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="359,150,0,0" VerticalAlignment="Top" Height="71" Width="202" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Content="SHOW" Name="ShowSaveButton" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="359,150,0,0" VerticalAlignment="Top" Height="71" Width="202" Click="Show_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/VOIR_SAUVEGARDE.png"/>
             </Button.Background>

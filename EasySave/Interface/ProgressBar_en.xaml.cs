@@ -63,5 +63,10 @@ namespace EasySave
                 this.Close();
             }
         }
+        public void FileSavedShow(string FileSaved)
+        {
+            Ressources.Text = Ressources.Text + "\n" + FileSaved;
+            Values.Instance.FileSaved = Values.Instance.FileSaved + 1;
+        }
     }
 }
