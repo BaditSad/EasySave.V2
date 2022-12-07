@@ -25,7 +25,6 @@ namespace EasySave
         public Save_fr()
         {
             InitializeComponent();
-            Values.Instance.FileToSave = 0;
             ListSave list = new ListSave();
             dgvData.ItemsSource = list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv");
             DeleteButton.IsEnabled = false;
@@ -83,11 +82,12 @@ namespace EasySave
 
         private void LaunchSave(object sender, RoutedEventArgs e)
         {
-            Values.Instance.FileToSave = File.ReadLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count();
+            Values.Instance.Lang = "fr";
             ProgressBar_fr window = new ProgressBar_fr();
             window.Top = this.Top + 100;
             window.Left = this.Left + 250;
             window.Show();
+            this.Close();
         }
 
         private void Delete(object sender, RoutedEventArgs e)

@@ -33,8 +33,8 @@
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="288" Fill="White" Margin="0,18,0,0" Height="87" VerticalAlignment="Top"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="160" Fill="White" Margin="15,28,0,0"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="270" Fill="White" Margin="0,65,0,0"/>
-        <ProgressBar Minimum="0" Maximum="100" Value="0" Name="pbStatus" Margin="20,72,20,0" Height="18" VerticalAlignment="Top" Background="White"/>
-        <TextBlock Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,73,0,0" />
+        <ProgressBar Value="{Binding Path=Progress}" Name="pbStatusFr" Margin="20,72,20,0" Height="18" VerticalAlignment="Top" Background="White"/>
+        <TextBlock Text="{Binding ElementName=pbStatusFr, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,73,0,0" />
         <Button Content="Button" Name="StopButton" Style="{StaticResource defaultButtonStyle}" HorizontalAlignment="Left" Margin="250,27,0,0" VerticalAlignment="Top" Height="30" Width="30" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_stop">
             <Button.Background>
                 <ImageBrush ImageSource="/Interface/pictures/stop.png"/>
@@ -52,7 +52,7 @@
         </Button>
         <Label Content="Statut :" HorizontalAlignment="Left" Margin="15,29,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="▶︎ pour démarrer" HorizontalAlignment="Left" Margin="56,29,0,0" VerticalAlignment="Top" Width="124" Foreground="White" Background="{x:Null}"/>
-        <TextBox Name="Ressources" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" Height="142"/>
+        <TextBox IsReadOnly="True" Name="Ressources" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" Height="142"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="280" Fill="White" Margin="0,6,0,0" Height="4" VerticalAlignment="Top"/>
         <Rectangle MouseDown="WindowsBar_MouseDown" RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="288" Fill="White" Margin="0,3,0,0" Height="10" VerticalAlignment="Top"/>
     </Grid>

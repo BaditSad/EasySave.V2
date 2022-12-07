@@ -1,4 +1,8 @@
-﻿using System;
+﻿using System.Diagnostics;
+using System.IO;
+using System.Windows.Documents;
+using System.Windows;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,49 +19,6 @@ namespace EasySave
 {
     internal class ProgressSave
     {
-        public void SavePlay()
-        {
-            ListSave list = new ListSave();
-            foreach (var items in list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv"))
-            {
-                var lines = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv");
-                if (Values.Instance.Lang == "en")
-                {
-                    ProgressBar_en saveFile = new ProgressBar_en();
-                    saveFile.FileSavedShow(File.ReadLines(Values.Instance.PathConfig + "\\Config\\Save.csv").First());
-                }
-                else if (Values.Instance.Lang == "fr")
-                {
-                    ProgressBar_fr saveFile = new ProgressBar_fr();
-                    saveFile.FileSavedShow(File.ReadLines(Values.Instance.PathConfig + "\\Config\\Save.csv").First());
-                }
-                File.WriteAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv", lines.Skip(1).ToArray());
-                Process[] cname = Process.GetProcessesByName("CalculatorApp");
-                if (cname.Length == 0)
-                {
-                    using (Process process = new Process())
-                    {
-                        process.StartInfo.Arguments = string.Format("/c move {0} {1}", items.Source, items.Target);
-                        process.StartInfo.FileName = "cmd.exe";
-                        process.StartInfo.UseShellExecute = false;
-                        process.StartInfo.CreateNoWindow = true;
-                        process.Start();
-                    }
-                }
-                else
-                {
-                    if (Values.Instance.Lang == "en")
-                    {
-                        MessageBox.Show("Calculator is running. Close it to continue.", "EasySave", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                    else if (Values.Instance.Lang == "fr")
-                    {
-                        MessageBox.Show("Calculatrice est ouvert. Fermé le pour continuer.", "EasySave", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-            }
-            
-        }
         public void SavePause()
         {
             Process[] workers = Process.GetProcessesByName("cmd");
@@ -87,7 +48,6 @@ namespace EasySave
                     }
                     else
                     {
-                        SavePlay();
                         return false;
                     }
                 }
@@ -99,7 +59,6 @@ namespace EasySave
                     }
                     else
                     {
-                        SavePlay();
                         return false;
                     }
                 }
