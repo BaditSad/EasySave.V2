@@ -73,7 +73,7 @@ namespace EasySave
                         if (Ressources.Text == "")
                         {
                             pbStatusEn.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
-                            Ressources.Text = IdFiledSaved + " - " + FileSaved;
+                            Ressources.Text = IdFiledSaved + " - " + FileSaved + "\n";
                             IdFiledSaved++;
                             Thread.Sleep(300);
                             DoEvents();
@@ -81,7 +81,7 @@ namespace EasySave
                         else
                         {
                             pbStatusEn.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
-                            Ressources.Text = Ressources.Text + "\n" + IdFiledSaved + " - " + FileSaved;
+                            Ressources.Text = Ressources.Text + "\n" + IdFiledSaved + " - " + FileSaved + "\n";
                             IdFiledSaved++;
                             Thread.Sleep(300);
                             DoEvents();
@@ -152,7 +152,7 @@ namespace EasySave
                             if (Ressources.Text == "")
                             {
                                 pbStatusEn.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
-                                Ressources.Text = IdFiledSaved + " - " + FileSaved;
+                                Ressources.Text = IdFiledSaved + " - " + FileSaved + "\n";
                                 IdFiledSaved++;
                                 Thread.Sleep(300);
                                 DoEvents();
@@ -160,7 +160,7 @@ namespace EasySave
                             else
                             {
                                 pbStatusEn.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
-                                Ressources.Text = Ressources.Text + "\n" + IdFiledSaved + " - " + FileSaved;
+                                Ressources.Text = Ressources.Text + "\n" + IdFiledSaved + " - " + FileSaved + "\n";
                                 IdFiledSaved++;
                                 Thread.Sleep(300);
                                 DoEvents();

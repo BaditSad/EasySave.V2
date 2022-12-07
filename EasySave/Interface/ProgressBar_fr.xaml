@@ -52,7 +52,7 @@
         </Button>
         <Label Content="Statut :" HorizontalAlignment="Left" Margin="15,29,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="▶︎ pour démarrer" HorizontalAlignment="Left" Margin="56,29,0,0" VerticalAlignment="Top" Width="124" Foreground="White" Background="{x:Null}"/>
-        <TextBox IsReadOnly="True" Name="Ressources" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" Height="142"/>
+        <TextBox IsReadOnly="True" Name="Ressources" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" Height="142" Background="#FF4B71D1" BorderBrush="White" Foreground="White"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="280" Fill="White" Margin="0,6,0,0" Height="4" VerticalAlignment="Top"/>
         <Rectangle MouseDown="WindowsBar_MouseDown" RadiusX="10" RadiusY="10" Opacity="0.1" HorizontalAlignment="Center" Width="288" Fill="White" Margin="0,3,0,0" Height="10" VerticalAlignment="Top"/>
     </Grid>
