@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,12 +25,15 @@ namespace EasySave
                     if (MessageBox.Show("Reset log ?", "Save file", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                     {
 
-                        StreamWriter json = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
+                        StreamWriter json = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json", true);
                         json.WriteLine("");
                         json.Close();
-                        StreamWriter xml = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
+                        StreamWriter xml = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml", true);
                         xml.WriteLine("");
                         xml.Close();
+                        StreamWriter log_json = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+                        log_json.WriteLine("");
+                        log_json.Close();
                     }
                 }
                 else if (Values.Instance.Lang == "fr")
@@ -37,12 +41,15 @@ namespace EasySave
                     if (MessageBox.Show("Reset logs ?", "Save file", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                     {
 
-                        StreamWriter json = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json");
+                        StreamWriter json = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json", true);
                         json.WriteLine("");
                         json.Close();
-                        StreamWriter xml = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml");
+                        StreamWriter xml = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml", true);
                         xml.WriteLine("");
                         xml.Close();
+                        StreamWriter log_json = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+                        log_json.WriteLine("");
+                        log_json.Close();
                     }
                 }
             }

@@ -27,6 +27,11 @@ namespace EasySave
                 Directory.CreateDirectory(Values.Instance.PathConfig + "\\Statelog");
             }
             //Create files
+            if (!File.Exists(Values.Instance.PathConfig + "\\Statelog\\Statelog.json"))
+            {
+                StreamWriter save = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json");
+                save.Close();
+            }
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
                 StreamWriter save = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv");
