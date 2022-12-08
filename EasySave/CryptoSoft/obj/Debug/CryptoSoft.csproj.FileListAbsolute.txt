@@ -1,0 +1,6 @@
+C:\Users\kubia\source\repos\CryptoSoft\bin\Debug\CryptoSoft.exe
+C:\Users\kubia\source\repos\CryptoSoft\bin\Debug\CryptoSoft.pdb
+C:\Users\kubia\source\repos\CryptoSoft\obj\Debug\CryptoSoft.csproj.AssemblyReference.cache
+C:\Users\kubia\source\repos\CryptoSoft\obj\Debug\CryptoSoft.csproj.CoreCompileInputs.cache
+C:\Users\kubia\source\repos\CryptoSoft\obj\Debug\CryptoSoft.exe
+C:\Users\kubia\source\repos\CryptoSoft\obj\Debug\CryptoSoft.pdb
