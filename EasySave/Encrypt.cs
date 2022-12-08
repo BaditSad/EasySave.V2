@@ -13,7 +13,10 @@ namespace EasySave
     {
         public void encryptFolder(string path)
         {
-
+            Process process = new Process();
+            process.StartInfo.FileName = @"";
+            process.StartInfo.Arguments = path;
+            process.Start();
         }
     }
 }
