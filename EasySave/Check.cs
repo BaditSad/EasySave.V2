@@ -26,7 +26,21 @@ namespace EasySave
             {
                 Directory.CreateDirectory(Values.Instance.PathConfig + "\\Statelog");
             }
+            if (!Directory.Exists(Values.Instance.PathConfig + "\\CryptoSoft"))
+            {
+                Directory.CreateDirectory(Values.Instance.PathConfig + "\\CryptoSoft");
+            }
             //Create files
+            if (!File.Exists(Values.Instance.PathConfig + "\\CryptoSoft\\Path.json"))
+            {
+                StreamWriter crypt = new StreamWriter(Values.Instance.PathConfig + "\\CryptoSoft\\Path.json");
+                crypt.Close();
+            }  
+            if (!File.Exists(Values.Instance.PathConfig + "\\CryptoSoft\\Ext.json"))
+            {
+                StreamWriter crypt = new StreamWriter(Values.Instance.PathConfig + "\\CryptoSoft\\Ext.json");
+                crypt.Close();
+            }
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
                 StreamWriter save = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv");

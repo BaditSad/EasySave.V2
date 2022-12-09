@@ -11,7 +11,7 @@ namespace EasySave
     {
         public void OpenFile()
         {
-            Process.Start(Values.Instance.PathConfig + "\\Config\\Ext.json");
+            Process.Start("notepad.exe", Values.Instance.PathConfig + "\\CryptoSoft\\Ext.json");
         }
     }
 }

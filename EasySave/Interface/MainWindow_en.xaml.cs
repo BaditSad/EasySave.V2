@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
 using System.IO;
+using System.Diagnostics;
 
 namespace EasySave
 {
@@ -24,6 +25,11 @@ namespace EasySave
     {
         public MainWindow_en()
         {
+            Process[] cname = Process.GetProcessesByName("EasySave");
+            if (cname.Length != 0)
+            {
+                this.Close();
+            }
             Check method = new Check();
             method.ChekFolder();
             if (Values.Instance.Lang == "en")

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -13,7 +14,39 @@ namespace EasySave
     {
         public void encryptFolder(string path)
         {
+            if (!Directory.Exists(path))
+            {
+                if (Values.Instance.Lang == "en")
+                {
+                    MessageBox.Show("Path didn't exist !", "CryptoSoft", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else if (Values.Instance.Lang == "fr")
+                {
+                    MessageBox.Show("Dossier inexistant !", "CryptoSoft", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                StreamWriter decrypt = new StreamWriter(Values.Instance.PathConfig + "\\CryptoSoft\\Path.json");
+                decrypt.WriteLine(path);
+                decrypt.Close();
+                Process[] cname = Process.GetProcessesByName("CryptoSoft");
+                if (cname.Length != 0)
+                {
+                    if (Values.Instance.Lang == "en")
+                    {
+                        MessageBox.Show("CryptoSoft is already running !", "CryptoSoft", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else if (Values.Instance.Lang == "fr")
+                    {
+                        MessageBox.Show("CryptoSoft déjà en cours d'exécution !", "CryptoSoft", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                else
+                {
 
+                }
+            }
         }
     }
 }
