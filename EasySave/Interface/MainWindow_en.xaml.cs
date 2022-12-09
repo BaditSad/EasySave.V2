@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Drawing;
 using System.IO;
 using System.Diagnostics;
+using System.Net.Sockets;
 
 namespace EasySave
 {
@@ -30,6 +31,12 @@ namespace EasySave
             {
                 this.Close();
             }
+
+            ServerConnect server = new ServerConnect();
+            server.AccepterConnexionAsync(server.SeConnecter());
+            server.EcouterReseau(server.SeConnecter());
+            server.Deconnecter(server.SeConnecter());
+
             Check method = new Check();
             method.ChekFolder();
             if (Values.Instance.Lang == "en")

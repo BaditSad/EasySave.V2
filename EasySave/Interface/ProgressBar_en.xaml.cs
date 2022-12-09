@@ -149,6 +149,7 @@ namespace EasySave
                 PlayButton.Opacity = 0.3;
                 PauseButton.IsEnabled = true;
                 PauseButton.Opacity = 1;
+                int start = DateTime.Now.Millisecond;
                 ListSave list = new ListSave();
                 foreach (var items in list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv"))
                 {
@@ -202,6 +203,11 @@ namespace EasySave
                         }
                     }
                 }
+                int stop = DateTime.Now.Millisecond;
+                int Id = File.ReadAllLines(Values.Instance.PathConfig + "\\Statelog\\Statelog.json").Count();
+                StreamWriter log_json = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+                log_json.Write("\nSAVE ID : " + Id + " | DATE : " + DateTime.Now + " | TIME : " + (stop - start) + " | STATE : Done");
+                log_json.Close();
                 PlayButton.IsEnabled = false;
                 PlayButton.Opacity = 0.3;
                 PauseButton.IsEnabled = false;

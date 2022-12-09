@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace EasySave
 {
@@ -53,9 +54,11 @@ namespace EasySave
             PlayButton.Opacity = 0.3;
             PauseButton.IsEnabled = true;
             PauseButton.Opacity = 1;
+            int start = DateTime.Now.Millisecond;
             ListSave list = new ListSave();
             foreach (var items in list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
+                int startW = DateTime.Now.Millisecond;
                 string FileSaved = File.ReadLines(Values.Instance.PathConfig + "\\Config\\Save.csv").First();
                 var lines = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv");
                 File.WriteAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv", lines.Skip(1).ToArray());
@@ -74,8 +77,9 @@ namespace EasySave
                             pbStatusFr.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
                             Ressources.Text = IdFiledSaved + " - " + FileSaved + "\n";
                             IdFiledSaved++;
+                            int stopW = DateTime.Now.Millisecond;
                             ProgressSave log = new ProgressSave();
-                            log.AddLog(items.Source, items.Target);
+                            log.AddLog(items.Source, items.Target, startW, stopW);
                             Thread.Sleep(300);
                             DoEvents();
                         }
@@ -84,8 +88,9 @@ namespace EasySave
                             pbStatusFr.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
                             Ressources.Text = Ressources.Text + "\n" + IdFiledSaved + " - " + FileSaved + "\n";
                             IdFiledSaved++;
+                            int stopW = DateTime.Now.Millisecond;
                             ProgressSave log = new ProgressSave();
-                            log.AddLog(items.Source, items.Target);
+                            log.AddLog(items.Source, items.Target, startW, stopW);
                             Thread.Sleep(300);
                             DoEvents();
                         }
@@ -103,15 +108,15 @@ namespace EasySave
                     }
                 }
             }
-            string? v = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").ToString();
-            string file = v;
-            if (v == "")
-            {
-                PlayButton.IsEnabled = false;
-                PlayButton.Opacity = 0.3;
-                PauseButton.IsEnabled = false;
-                PauseButton.Opacity = 0.3;
-            }
+            int stop = DateTime.Now.Millisecond;
+            int Id = File.ReadAllLines(Values.Instance.PathConfig + "\\Statelog\\Statelog.json").Count();
+            StreamWriter log_json = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+            log_json.Write("\nSAVE ID : " + Id + " | DATE : " + DateTime.Now + " | TIME : " + (stop - start) + " | STATE : Done");
+            log_json.Close();
+            PlayButton.IsEnabled = false;
+            PlayButton.Opacity = 0.3;
+            PauseButton.IsEnabled = false;
+            PauseButton.Opacity = 0.3;
         }
         private void Button_pause(object sender, RoutedEventArgs e)
         {
@@ -139,9 +144,11 @@ namespace EasySave
                 PlayButton.Opacity = 0.3;
                 PauseButton.IsEnabled = true;
                 PauseButton.Opacity = 1;
+                int start = DateTime.Now.Millisecond;
                 ListSave list = new ListSave();
                 foreach (var items in list.LoadDataGridView(Values.Instance.PathConfig + "\\Config\\Save.csv"))
                 {
+                    int startW = DateTime.Now.Millisecond;
                     string FileSaved = File.ReadLines(Values.Instance.PathConfig + "\\Config\\Save.csv").First();
                     var lines = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv");
                     File.WriteAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv", lines.Skip(1).ToArray());
@@ -160,8 +167,9 @@ namespace EasySave
                                 pbStatusFr.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
                                 Ressources.Text = IdFiledSaved + " - " + FileSaved + "\n";
                                 IdFiledSaved++;
+                                int stopW = DateTime.Now.Millisecond;
                                 ProgressSave log = new ProgressSave();
-                                log.AddLog(items.Source, items.Target);
+                                log.AddLog(items.Source, items.Target, startW, stopW);
                                 Thread.Sleep(300);
                                 DoEvents();
                             }
@@ -170,8 +178,9 @@ namespace EasySave
                                 pbStatusFr.Value = (((NumberOfLines - File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").Count()) * 100) / NumberOfLines);
                                 Ressources.Text = Ressources.Text + "\n" + IdFiledSaved + " - " + FileSaved + "\n";
                                 IdFiledSaved++;
+                                int stopW = DateTime.Now.Millisecond;
                                 ProgressSave log = new ProgressSave();
-                                log.AddLog(items.Source, items.Target);
+                                log.AddLog(items.Source, items.Target, startW, stopW);
                                 Thread.Sleep(300);
                                 DoEvents();
                             }
@@ -189,15 +198,15 @@ namespace EasySave
                         }
                     }
                 }
-                string? v = File.ReadAllLines(Values.Instance.PathConfig + "\\Config\\Save.csv").ToString();
-                string file = v;
-                if (v == "")
-                {
-                    PlayButton.IsEnabled = false;
-                    PlayButton.Opacity = 0.3;
-                    PauseButton.IsEnabled = false;
-                    PauseButton.Opacity = 0.3;
-                }
+                int stop = DateTime.Now.Millisecond;
+                int Id = File.ReadAllLines(Values.Instance.PathConfig + "\\Statelog\\Statelog.json").Count();
+                StreamWriter log_json = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+                log_json.Write("\nSAVE ID : " + Id + " | DATE : " + DateTime.Now + " | TIME : " + (stop - start) + " | STATE : Done");
+                log_json.Close();
+                PlayButton.IsEnabled = false;
+                PlayButton.Opacity = 0.3;
+                PauseButton.IsEnabled = false;
+                PauseButton.Opacity = 0.3;
             }
         }
     }
