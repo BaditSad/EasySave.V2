@@ -7,33 +7,33 @@ namespace CryptoSoft
     class Program
     {
         //int Main
-        static void Main(string[] args)
+        static void Main(string[] arg_PathExt, string[] arg_PathFolder, string[] arg_lang)
         {
             //string lang = "";
-            string[] extension = { ".PNG", ".txt", ".nsp" };
+            Values getExt = new Values();
 
             int T = 0; 
 
-            DirectoryInfo place = new DirectoryInfo(args[0]);
+            DirectoryInfo place = new DirectoryInfo(arg_PathFolder[0]);
             FileInfo[] Files = place.GetFiles();
 
             var banner = new Banner();
             banner.CryptoSoftBanner();
 
             Console.WriteLine("\nExtension selected:\n");
-            foreach (string i in extension)
+            foreach (object item in getExt.ExtListDo(arg_PathExt[0]))
             {
-                Console.WriteLine("- " + i);
+                Console.WriteLine("- " + item);
             }
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\r___________________________________________________________________");
-            Console.WriteLine("\nFiles about to get crypt from the selected folder, " + args[0] + ":\n");
+            Console.WriteLine("\nFiles about to get crypt from the selected folder, " + arg_PathFolder[0] + ":\n");
             foreach (FileInfo i in Files)
             {
                 string a = i.Name;
                 string b = i.Extension;
-                var check = Array.Exists(extension, x => x == b);
+                var check = Array.Exists(/*Extension*\, x => x == b);
 
                 if (check == true)
                 {   
@@ -60,7 +60,7 @@ namespace CryptoSoft
                 {
                     Console.WriteLine("File: " + a + " being crypt");
                     var process = new Crypt();
-                    process.Xor(args[0] + a);
+                    process.Xor(arg_PathFolder[0] + a);
                 }
             }
             Console.WriteLine("\r___________________________________________________________________");
