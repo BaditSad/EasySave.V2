@@ -26,17 +26,11 @@ namespace EasySave
     {
         public MainWindow_en()
         {
-            Process[] cname = Process.GetProcessesByName("EasySave");
-            if (cname.Length != 0)
-            {
-                this.Close();
-            }
-
-            ServerConnect server = new ServerConnect();
-            server.AccepterConnexionAsync(server.SeConnecter());
-            server.EcouterReseau(server.SeConnecter());
-            server.Deconnecter(server.SeConnecter());
-
+            //Process[] cname = Process.GetProcessesByName("EasySave");
+            //if (cname.Count != 0)
+            //{
+            //    this.Close();
+            //}
             Check method = new Check();
             method.ChekFolder();
             if (Values.Instance.Lang == "en")

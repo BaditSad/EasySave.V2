@@ -77,9 +77,9 @@
         <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="256" Fill="White" Margin="365,127,0,0"/>
         <Label Content="EasySave © 2022 - 2023 ProSoft all rights reserved" Margin="201,340,311,0" VerticalAlignment="Top" Foreground="White"/>
         <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="256" Fill="White" Margin="61,124,0,0"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="555,156,0,0" VerticalAlignment="Top" Width="38" Fill="#FF66F8F9"/>
-        <Button Content="Open" Style="{StaticResource defaultButtonStyle}" Click="OpenExt" HorizontalAlignment="Left" Margin="557,158,0,0" VerticalAlignment="Top" Width="34" Background="#FF3FABE0" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" Padding="1,1,1,2" BorderThickness="2,2,2,2"/>
-        <Label Content="Extension to not encrypt :" HorizontalAlignment="Left" Margin="388,153,0,0" VerticalAlignment="Top" Width="143" Foreground="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="555,146,0,0" VerticalAlignment="Top" Width="38" Fill="#FF66F8F9"/>
+        <Button Content="Open" Style="{StaticResource defaultButtonStyle}" Click="OpenExt" HorizontalAlignment="Left" Margin="557,148,0,0" VerticalAlignment="Top" Width="34" Background="#FF3FABE0" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" Padding="1,1,1,2" BorderThickness="2,2,2,2"/>
+        <Label Content="Extension to not encrypt :" HorizontalAlignment="Left" Margin="388,143,0,0" VerticalAlignment="Top" Width="143" Foreground="White"/>
         <Label Content="Select a folder :" HorizontalAlignment="Left" Margin="71,124,0,0" VerticalAlignment="Top" Width="92" Foreground="White"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,155,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="271,129,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>
@@ -96,5 +96,6 @@
                 <ImageBrush ImageSource="/Interface/pictures/CLEAR.png"/>
             </Button.Background>
         </Button>
+        <Label Content="(json;txt;csv;...)" HorizontalAlignment="Left" Margin="388,167,0,0" VerticalAlignment="Top" Width="143" Foreground="#FFC6C6C6"/>
     </Grid>
 </Window>
