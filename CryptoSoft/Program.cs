@@ -34,7 +34,7 @@ namespace CryptoSoft
 
             foreach (var items in list.ExtListDo())
             {
-                step.print01(items);
+                step.print01(items.ToString());
             }
 
             step.print1(Values.Instance.Lang);
