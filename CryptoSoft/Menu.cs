@@ -11,14 +11,14 @@ namespace CryptoSoft
             {
                 Console.WriteLine(("").PadRight(70, '='));
                 Console.WriteLine(("").PadRight(70, '='));
-                Console.WriteLine("\nExtensions found in EasySave3.0 configuration's file:");
+                Console.WriteLine("\nExtensions found in EasySave3.0 configuration's file:\n");
             }
 
             if (lang == "fr")
             {
                 Console.WriteLine(("").PadRight(88, '='));
                 Console.WriteLine(("").PadRight(88, '='));
-                Console.WriteLine("\nExtensions trouvées dans le fichier de configuration de EasySave3.0 :");
+                Console.WriteLine("\nExtensions trouvées dans le fichier de configuration de EasySave3.0 :\n");
             }
         }
 
