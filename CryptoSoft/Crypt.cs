@@ -6,11 +6,11 @@ namespace CryptoSoft
 {
     class Crypt
     {
-        public int Xor(string path)
+        public int Xor(string path, string file)
         {
             try
             {
-                DateTime mstart = DateTime.Now;
+                DateTime mstart = DateTime.Now; 
 
                 byte[] byteToEncrypt = File.ReadAllBytes(path);
                 BitArray bitToEncrypt = new BitArray(byteToEncrypt);
@@ -25,9 +25,15 @@ namespace CryptoSoft
 
                 for (int i = 0; i < bitToEncrypt.Length; i++)
                 {
+                    int k = 100 * i / bitToEncrypt.Length;
                     j = i % byteKey.Length;
                     bitCrypted[i] = bitToEncrypt[i] ^ bitKey[j];
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.Write("\r      Process running on: " + file + " [{0}]   ", k);
                 }
+                
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.Write("\r      Process running on: " + file + " [{0}]   ", "Done");
 
                 bitCrypted.CopyTo(byteCrypted, 0);
 
@@ -35,18 +41,18 @@ namespace CryptoSoft
 
                 TimeSpan mend = DateTime.Now - mstart;
 
-                int c = mend.Milliseconds;
+                int time = mend.Milliseconds;
 
-                Console.WriteLine("File crypted in " + c + "ms\n");
+                Console.WriteLine("\n      Process successful! Duration " + time + "ms!");
 
-                if (c == 0)
+                if (time == 0)
                 {
                     return 0;
                 }
 
-                if (c > 0)
+                if (time > 0)
                 {
-                    return c;
+                    return time;
                 }
 
                 return 1;
@@ -54,7 +60,9 @@ namespace CryptoSoft
 
             catch
             {
-                Console.WriteLine("Error cannot crypt this file\n");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("\r      Process running on: " + file + " [Error]");
+                Console.WriteLine("\r      Error during process! Process aborted! \n");
                 return -1;
             }
         }
