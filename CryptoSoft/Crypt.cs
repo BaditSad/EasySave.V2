@@ -1,21 +1,24 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Collections;
+using System.Threading;
 
 namespace CryptoSoft
 {
     class Crypt
     {
-        public int Xor(string path, string file)
+        public int Xor(string path, string file, string lang)
         {
+            var step = new Menu();
+            
             try
             {
-                DateTime mstart = DateTime.Now; 
+                DateTime mstart = DateTime.Now;
 
                 byte[] byteToEncrypt = File.ReadAllBytes(path);
                 BitArray bitToEncrypt = new BitArray(byteToEncrypt);
 
-                byte[] byteKey = new byte[8] { 9, 43, 102, 147, 8, 52, 157, 183 };
+                byte[] byteKey = new byte[64] {9, 43, 102, 147, 8, 52, 157, 183, 9, 43, 102, 147, 8, 52, 157, 183, 9, 43, 102, 147, 8, 52, 157, 183, 9, 43, 102, 147, 8, 52, 157, 183, 9, 43, 102, 147, 8, 52, 157, 183, 9, 43, 102, 147, 8, 52, 157, 183, 9, 43, 102, 147, 8, 52, 157, 183, 9, 43, 102, 147, 8, 52, 157, 183};
                 BitArray bitKey = new BitArray(byteKey);
 
                 byte[] byteCrypted = new byte[byteToEncrypt.Length];
@@ -25,44 +28,27 @@ namespace CryptoSoft
 
                 for (int i = 0; i < bitToEncrypt.Length; i++)
                 {
-                    int k = 100 * i / bitToEncrypt.Length;
+                    //int k = 100 * i / bitToEncrypt.Length;
                     j = i % byteKey.Length;
                     bitCrypted[i] = bitToEncrypt[i] ^ bitKey[j];
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.Write("\r      Process running on: " + file + " [{0}]   ", k);
+                    //step.print71(lang, file, k);
                 }
-                
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.Write("\r      Process running on: " + file + " [{0}]   ", "Done");
+
+                step.print72(lang, file);
 
                 bitCrypted.CopyTo(byteCrypted, 0);
-
                 File.WriteAllBytes(path, byteCrypted);
 
                 TimeSpan mend = DateTime.Now - mstart;
-
                 int time = mend.Milliseconds;
 
-                Console.WriteLine("\n      Process successful! Duration " + time + "ms!");
-
-                if (time == 0)
-                {
-                    return 0;
-                }
-
-                if (time > 0)
-                {
-                    return time;
-                }
-
-                return 1;
+                step.print73(lang, time);
+                return time;
             }
 
             catch
             {
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("\r      Process running on: " + file + " [Error]");
-                Console.WriteLine("\r      Error during process! Process aborted! \n");
+                step.print74(lang, file);
                 return -1;
             }
         }
