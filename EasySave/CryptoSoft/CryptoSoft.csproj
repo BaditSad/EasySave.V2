@@ -52,6 +52,9 @@
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\CryptoSoft\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tempsnip.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,6 +63,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tempsnip.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
