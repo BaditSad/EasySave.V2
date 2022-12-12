@@ -9,10 +9,10 @@ namespace CryptoSoft
         public void CryptoSoftBanner()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write(" \r\n╔═══╗────────╔╗───╔═══╗───╔═╦╗\r\n║╔═╗║───────╔╝╚╗──║╔═╗║───║╔╝╚╗\r\n║║─╚╬═╦╗─╔╦═╩╗╔╬══╣╚══╦══╦╝╚╗╔╝\r\n║║─╔╣╔╣║─║║╔╗║║║╔╗╠══╗║╔╗╠╗╔╣║\r\n║╚═╝║║║╚═╝║╚╝║╚╣╚╝║╚═╝║╚╝║║║║╚╗\r\n╚═══╩╝╚═╗╔╣╔═╩═╩══╩═══╩══╝╚╝╚═╝\r\n──────╔═╝║║║\r\n──────╚══╝╚╝");
+            Console.Write("\r\n╔═══╗────────╔╗───╔═══╗───╔═╦╗\r\n║╔═╗║───────╔╝╚╗──║╔═╗║───║╔╝╚╗\r\n║║─╚╬═╦╗─╔╦═╩╗╔╬══╣╚══╦══╦╝╚╗╔╝\r\n║║─╔╣╔╣║─║║╔╗║║║╔╗╠══╗║╔╗╠╗╔╣║\r\n║╚═╝║║║╚═╝║╚╝║╚╣╚╝║╚═╝║╚╝║║║║╚╗\r\n╚═══╩╝╚═╗╔╣╔═╩═╩══╩═══╩══╝╚╝╚═╝\r\n──────╔═╝║║║\r\n──────╚══╝╚╝");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" .ProSoft\n");
-            Console.WriteLine("\r___________________________________________________________________");
+            Console.Write(" .ProSoft\n\n");
+            Console.WriteLine(("").PadRight(63, '='));
         }
     }
 }
