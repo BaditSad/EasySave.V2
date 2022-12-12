@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections;
 using System.Threading;
+using System.Diagnostics;
 
 namespace CryptoSoft
 {
