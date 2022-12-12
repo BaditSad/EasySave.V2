@@ -14,6 +14,7 @@ using System.Diagnostics;
 using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using Microsoft.WindowsAPICodePack.Shell;
+using System.Collections;
 
 namespace EasySave
 {
@@ -38,6 +39,9 @@ namespace EasySave
                 worker.WaitForExit();
                 worker.Dispose();
             }
+            StreamWriter log_xml = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+            log_xml.Write("\nINTERUPTION");
+            log_xml.Close();
         }
         public bool SaveStop()
         {
@@ -47,6 +51,9 @@ namespace EasySave
                 worker.Kill();
                 worker.WaitForExit();
                 worker.Dispose();
+                StreamWriter log_xml = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+                log_xml.Write("\nINTERUPTION");
+                log_xml.Close();
             }
             if (new FileInfo(Values.Instance.PathConfig + "\\Config\\Save.csv").Length != 0)
             {
@@ -58,6 +65,9 @@ namespace EasySave
                     }
                     else
                     {
+                        StreamWriter log_xml = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+                        log_xml.Write("\nCONTINUE");
+                        log_xml.Close();
                         return false;
                     }
                 }
@@ -69,6 +79,9 @@ namespace EasySave
                     }
                     else
                     {
+                        StreamWriter log_xml = new StreamWriter(Values.Instance.PathConfig + "\\Statelog\\Statelog.json", true);
+                        log_xml.Write("\nCONTINUE");
+                        log_xml.Close();
                         return false;
                     }
                 }
