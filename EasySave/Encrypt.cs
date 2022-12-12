@@ -44,7 +44,10 @@ namespace EasySave
                 }
                 else
                 {
-
+                    Process process = new Process();
+                    process.StartInfo.FileName = "CryptoSoft";
+                    process.StartInfo.Arguments = Values.Instance.PathConfig;
+                    process.Start();
                 }
             }
         }

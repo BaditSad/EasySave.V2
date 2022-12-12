@@ -1,78 +1,81 @@
-﻿using System;
+﻿// A C# program for Client
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-// Client app is the one sending messages to a Server/listener.
-// Both listener and client can send messages back and forth once a
-// communication is established.
-public class SocketClient
+namespace Client
 {
-    public static int Main(String[] args)
-    {
-        StartClient();
-        return 0;
-    }
 
-    public static void StartClient()
+    class Program
     {
-        byte[] bytes = new byte[1024];
-
-        try
+        static void Main(string[] args)
         {
-            // Connect to a Remote server
-            // Get Host IP Address that is used to establish a connection
-            // In this case, we get one IP address of localhost that is IP : 127.0.0.1
-            // If a host has multiple addresses, you will get a list of addresses
-            IPHostEntry host = Dns.GetHostEntry("localhost");
-            IPAddress ipAddress = host.AddressList[0];
-            IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000);
+            ExecuteClient();
+        }
 
-            // Create a TCP/IP  socket.
-            Socket sender = new Socket(ipAddress.AddressFamily,
-                SocketType.Stream, ProtocolType.Tcp);
+        static void ExecuteClient()
+        {
 
-            // Connect the socket to the remote endpoint. Catch any errors.
             try
             {
-                // Connect to Remote EndPoint
-                sender.Connect(remoteEP);
 
-                Console.WriteLine("Socket connected to {0}", sender.RemoteEndPoint.ToString());
+                IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
+                IPAddress ipAddr = ipHost.AddressList[0];
+                IPEndPoint localEndPoint = new IPEndPoint(ipAddr, 11111);
 
-                // Encode the data string into a byte array.
-                byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");
+                Socket sender = new Socket(ipAddr.AddressFamily,
+                        SocketType.Stream, ProtocolType.Tcp);
 
-                // Send the data through the socket.
-                int bytesSent = sender.Send(msg);
+                try
+                {
 
-                // Receive the response from the remote device.
-                int bytesRec = sender.Receive(bytes);
-                Console.WriteLine("Echoed test = {0}",
-                    Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                    sender.Connect(localEndPoint);
 
-                // Release the socket.
-                sender.Shutdown(SocketShutdown.Both);
-                sender.Close();
+                    Console.WriteLine("Socket connected to -> {0} ",
+                                sender.RemoteEndPoint.ToString());
 
+                    byte[] messageSent = Encoding.ASCII.GetBytes("Test Client<EOF>");
+                    int byteSent = sender.Send(messageSent);
+
+                    byte[] messageReceived = new byte[1024];
+
+                    int byteRecv = sender.Receive(messageReceived);
+                    Console.WriteLine("Message from Server -> {0}",
+                        Encoding.ASCII.GetString(messageReceived,
+                                                    0, byteRecv));
+
+                    // Close Socket using
+                    // the method Close()
+                    sender.Shutdown(SocketShutdown.Both);
+                    sender.Close();
+                    Console.ReadKey();
+                }
+
+                // Manage of Socket's Exceptions
+                catch (ArgumentNullException ane)
+                {
+
+                    Console.WriteLine("ArgumentNullException : {0}", ane.ToString());
+                }
+
+                catch (SocketException se)
+                {
+
+                    Console.WriteLine("SocketException : {0}", se.ToString());
+                }
+
+                catch (Exception e)
+                {
+                    Console.WriteLine("Unexpected exception : {0}", e.ToString());
+                }
             }
-            catch (ArgumentNullException ane)
-            {
-                Console.WriteLine("ArgumentNullException : {0}", ane.ToString());
-            }
-            catch (SocketException se)
-            {
-                Console.WriteLine("SocketException : {0}", se.ToString());
-            }
+
             catch (Exception e)
             {
-                Console.WriteLine("Unexpected exception : {0}", e.ToString());
-            }
 
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString());
+                Console.WriteLine(e.ToString());
+            }
         }
     }
 }

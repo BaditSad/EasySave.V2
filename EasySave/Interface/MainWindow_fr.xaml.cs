@@ -137,16 +137,7 @@ namespace EasySave
                 StatusConnexion.Content = ": Connecter";
                 StatusConnexion.Foreground = Brushes.Green;
                 Values.Instance.Connected = true;
-            }
-        }
-        private void ConnectOn_Click(object sender, RoutedEventArgs e)
-        {
-            if (MessageBox.Show("Stop connection ?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                //Stop connection
-                StatusConnexion.Content = ": Déconnecter";
-                StatusConnexion.Foreground = Brushes.Red;
-                Values.Instance.Connected = false;
+                StatusConnexion.IsEnabled = false;
             }
         }
     }
