@@ -18,6 +18,7 @@ namespace CryptoSoft
             string choiceR = "";
             int nFiles = 0;
             int nFile = 1;
+            bool B = false;
 
             DirectoryInfo place = new DirectoryInfo(Values.Instance.PathToCrypt);
             FileInfo[] Files = place.GetFiles();
@@ -71,11 +72,10 @@ namespace CryptoSoft
                         nFiles++;
                     }
                 }
-                /*else if (check == false)
+                /*if (B == false)
                 {
-                    step.print3(lang);
-                    Thread.Sleep(5000);
-                    Console.Clear();
+                    step.print3(Values.Instance.Lang);
+                    return -1;
                 }*/
             }
 
@@ -89,7 +89,6 @@ namespace CryptoSoft
 
             if (choiceR == "y" & choiceR == "Y")
             {
-                Console.Clear();
                 return 1;
             }
 
@@ -104,7 +103,16 @@ namespace CryptoSoft
                 {
                     if (b == items.ToString())
                     {
-                        step.print6(Values.Instance.Lang, a, nFile, nFiles);
+                        if(nFile < 10)
+                        {
+                            step.print6(Values.Instance.Lang, a, nFile, nFiles);
+                        }
+                        
+                        else 
+                        {
+                            step.print61(Values.Instance.Lang, a, nFile, nFiles);
+                        }
+
                         var process = new Crypt();
                         process.Xor(Values.Instance.PathToCrypt + a, a, Values.Instance.Lang);
                         nFile++;
@@ -114,6 +122,7 @@ namespace CryptoSoft
 
             step.print8(Values.Instance.Lang, Values.Instance.PathToCrypt);
             step.print9(Values.Instance.Lang);
+            return 1;
         }
     }
 }
