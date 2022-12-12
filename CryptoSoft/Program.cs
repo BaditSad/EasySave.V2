@@ -34,10 +34,7 @@ namespace CryptoSoft
 
             foreach (var items in list.ExtListDo())
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("- ");
-                Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                Console.WriteLine(items);
+                step.print01(items);
             }
 
             step.print1(Values.Instance.Lang);
@@ -65,10 +62,7 @@ namespace CryptoSoft
                 {
                     if (b == items.ToString())
                     {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("- ");
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                        Console.WriteLine(a);
+                        step.print21(a);
                         nFiles++;
                     }
                 }
