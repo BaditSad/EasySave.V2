@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
 using System.IO;
+using System.Diagnostics;
 
 namespace EasySave
 {
@@ -30,20 +31,21 @@ namespace EasySave
                 ShowSaveButton.IsEnabled = false;
                 ShowSaveButton.Opacity = 0.3;
             }
-            else
+            if (new FileInfo(Values.Instance.PathConfig + "\\Dailylog\\Log.json").Length != 0)
             {
                 ShowSaveButton.IsEnabled = true;
                 ShowSaveButton.Opacity = 1;
             }
-            if (Values.Instance.Connected == true)
+            Process[] pname = Process.GetProcessesByName("EasySaveServer");
+            if (pname.Length > 0)
             {
-                StatusConnexion.Content = ": Connecter";
-                StatusConnexion.Foreground = Brushes.Green;
+                MessageBox.Show("true");
+                Values.Instance.Connected = true;
             }
-            else
+            if (pname.Length == 0)
             {
-                StatusConnexion.Content = ": Déconnecter";
-                StatusConnexion.Foreground = Brushes.Red;
+                MessageBox.Show("true");
+                Values.Instance.Connected = false;
             }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -134,10 +136,7 @@ namespace EasySave
             ServerConnect connect = new ServerConnect();
             if (connect.ServerConnectMain() == true)
             {
-                StatusConnexion.Content = ": Connecter";
-                StatusConnexion.Foreground = Brushes.Green;
                 Values.Instance.Connected = true;
-                StatusConnexion.IsEnabled = false;
             }
         }
     }

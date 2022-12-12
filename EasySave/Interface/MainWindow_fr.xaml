@@ -102,6 +102,5 @@
                 <ImageBrush ImageSource="/Interface/pictures/wifion.png"/>
             </Button.Background>
         </Button>
-        <Label Name="StatusConnexion" Content=": Déconnecter" HorizontalAlignment="Left" Margin="121,14,0,0" VerticalAlignment="Top" Width="136" Foreground="Red"/>
     </Grid>
 </Window>

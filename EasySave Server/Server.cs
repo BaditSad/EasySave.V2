@@ -1,6 +1,7 @@
 ﻿
 // A C# Program for Server
 using System;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -14,40 +15,34 @@ namespace Server
         // Main Method
         static void Main(string[] args)
         {
-            ExecuteServer();
+            ExecuteServerAsync();
         }
 
-        public static void ExecuteServer()
+        public static async Task ExecuteServerAsync()
         {
             IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddr = ipHost.AddressList[0];
             IPEndPoint localEndPoint = new IPEndPoint(ipAddr, 11111);
             Socket listener = new Socket(ipAddr.AddressFamily,
                          SocketType.Stream, ProtocolType.Tcp);
-
             try
             {
                 listener.Bind(localEndPoint);
                 listener.Listen(10);
 
+                Socket clientSocket = listener.Accept();
                 while (true)
                 {
-                    Socket clientSocket = listener.Accept();
                     byte[] bytes = new Byte[1024];
-                    string data = null;
                     while (true)
                     {
-                        int numByte = clientSocket.Receive(bytes);
-                        data += Encoding.ASCII.GetString(bytes,
-                                                   0, numByte);
-
-                        if (data.IndexOf("<EOF>") > -1)
-                            break;
+                        string data = Directory.GetCurrentDirectory();
+                        data = data + "\\Statelog\\Statelog.json";
+                        StreamReader read = new StreamReader(data, Encoding.UTF8);
+                        byte[] message = Encoding.ASCII.GetBytes(read.ReadToEnd());
+                        _ = await clientSocket.SendAsync(message, SocketFlags.None);
+                        Thread.Sleep(5000);
                     }
-                    byte[] message = Encoding.ASCII.GetBytes("Test Server");
-                    clientSocket.Send(message);
-                    clientSocket.Shutdown(SocketShutdown.Both);
-                    clientSocket.Close();
                 }
             }
             catch (Exception e)

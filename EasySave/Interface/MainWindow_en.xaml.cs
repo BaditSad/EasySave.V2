@@ -47,16 +47,6 @@ namespace EasySave
                     ShowSaveButton.IsEnabled = true;
                     ShowSaveButton.Opacity = 1;
                 }
-                if (Values.Instance.Connected == true)
-                {
-                    StatusConnexion.Content = ": Connected";
-                    StatusConnexion.Foreground = Brushes.Green;
-                }
-                else
-                {
-                    StatusConnexion.Content = ": Disconnected";
-                    StatusConnexion.Foreground = Brushes.Red;
-                }
             }
             else if (Values.Instance.Lang == "fr")
             { 
@@ -155,10 +145,7 @@ namespace EasySave
             ServerConnect connect = new ServerConnect();
             if (connect.ServerConnectMain() == true)
             {
-                StatusConnexion.Content = ": Connected";
-                StatusConnexion.Foreground = Brushes.Green;
                 Values.Instance.Connected = true;
-                StatusConnexion.IsEnabled = false;
             }
         }
     }
