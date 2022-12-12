@@ -21,6 +21,14 @@ namespace CryptoSoft
                 Console.WriteLine("\nExtensions trouvées dans le fichier de configuration de EasySave3.0 :\n");
             }
         }
+        
+        public void print01(string i)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("- ");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine(i + " ");
+        }
 
         public void print1(string lang)
         {
@@ -55,6 +63,14 @@ namespace CryptoSoft
 
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine(file + "\n");
+        }
+        
+        public void print21(string a)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("- ");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine(a);
         }
 
         public void print3(string lang)
