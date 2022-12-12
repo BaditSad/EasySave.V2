@@ -13,7 +13,10 @@ namespace CryptoSoft
             
             try
             {
-                DateTime mstart = DateTime.Now;
+                int B = 0;
+
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
 
                 byte[] byteToEncrypt = File.ReadAllBytes(path);
                 BitArray bitToEncrypt = new BitArray(byteToEncrypt);
@@ -28,10 +31,16 @@ namespace CryptoSoft
 
                 for (int i = 0; i < bitToEncrypt.Length; i++)
                 {
-                    //int k = 100 * i / bitToEncrypt.Length;
                     j = i % byteKey.Length;
                     bitCrypted[i] = bitToEncrypt[i] ^ bitKey[j];
-                    //step.print71(lang, file, k);
+                    
+                    int k = 100 * i / bitToEncrypt.Length;
+                         
+                    if (k == B)
+                    {
+                        step.print71(lang, file, k);
+                        B = k + 1;
+                    }
                 }
 
                 step.print72(lang, file);
@@ -39,8 +48,10 @@ namespace CryptoSoft
                 bitCrypted.CopyTo(byteCrypted, 0);
                 File.WriteAllBytes(path, byteCrypted);
 
-                TimeSpan mend = DateTime.Now - mstart;
-                int time = mend.Milliseconds;
+                stopWatch.Stop();
+                
+                TimeSpan ts = stopWatch.Elapsed;
+                int time = ts.Milliseconds;
 
                 step.print73(lang, time);
                 return time;
