@@ -7,7 +7,7 @@ namespace CryptoSoft
     class Program
     {
         //int Main
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             Values.Instance.EasySavePath = args[0];
             Values.Instance.Lang = Values.Instance.EasySavePath + "\\Config\\Lang.json";
