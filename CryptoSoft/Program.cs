@@ -10,10 +10,16 @@ namespace CryptoSoft
         static int Main(string[] args)
         {
             Values.Instance.EasySavePath = args[0];
-            Values.Instance.Lang = Values.Instance.EasySavePath + "\\Config\\Lang.json";
-            Values.Instance.ExtValues = Values.Instance.EasySavePath + "\\CryptoSoft\\Ext.json";
-            Values.Instance.PathToCrypt = Values.Instance.EasySavePath + "\\CryptoSoft\\PathToCrypt.json";
-            List list = new List();
+            StreamReader lang = new StreamReader(Values.Instance.EasySavePath + "\\Config\\Lang.json");
+            Values.Instance.Lang = lang.ReadLine();
+            lang.Close();
+            StreamReader ext = new StreamReader(Values.Instance.EasySavePath + "\\CryptoSoft\\Ext.json");
+            Values.Instance.ExtValues = ext.ReadLine();
+            ext.Close();
+            StreamReader path = new StreamReader(Values.Instance.EasySavePath + "\\CryptoSoft\\PathToCrypt.json");
+            Values.Instance.PathToCrypt = path.ReadLine();
+            path.Close();
+            var list = Values.Instance.ExtValues.Split(';').ToList();
             string choiceS = "";
             string choiceR = "";
             int nFiles = 0;
@@ -32,7 +38,7 @@ namespace CryptoSoft
 
             step.print0(Values.Instance.Lang);
 
-            foreach (var items in list.ExtListDo())
+            foreach (var items in list)
             {
                 step.print01(items.ToString());
             }
@@ -58,7 +64,7 @@ namespace CryptoSoft
             {
                 string a = i.Name;
                 string b = i.Extension;
-                foreach (var items in list.ExtListDo())
+                foreach (var items in list)
                 {
                     if (b == items.ToString())
                     {
@@ -93,7 +99,7 @@ namespace CryptoSoft
             {
                 string a = i.Name;
                 string b = i.Extension;
-                foreach (var items in list.ExtListDo())
+                foreach (var items in list)
                 {
                     if (b == items.ToString())
                     {

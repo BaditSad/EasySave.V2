@@ -79,7 +79,7 @@
         <Rectangle Opacity="0.1" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="256" Fill="White" Margin="61,124,0,0"/>
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="555,146,0,0" VerticalAlignment="Top" Width="38" Fill="#FF66F8F9"/>
         <Button Content="Open" Style="{StaticResource defaultButtonStyle}" Click="OpenExt" HorizontalAlignment="Left" Margin="557,148,0,0" VerticalAlignment="Top" Width="34" Background="#FF3FABE0" BorderBrush="#FF66F8F9" Foreground="#FF66F8F9" Padding="1,1,1,2" BorderThickness="2,2,2,2"/>
-        <Label Content="Extension to not encrypt :" HorizontalAlignment="Left" Margin="388,143,0,0" VerticalAlignment="Top" Width="143" Foreground="White"/>
+        <Label Content="Extension to encrypt :" HorizontalAlignment="Left" Margin="388,143,0,0" VerticalAlignment="Top" Width="143" Foreground="White"/>
         <Label Content="Select a folder :" HorizontalAlignment="Left" Margin="71,124,0,0" VerticalAlignment="Top" Width="92" Foreground="White"/>
         <Rectangle RadiusX="10" RadiusY="10" Opacity="0.4" HorizontalAlignment="Left" Height="29" Margin="68,155,0,0" VerticalAlignment="Top" Width="237" Fill="#FF3762CC"/>
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="271,129,0,0" VerticalAlignment="Top" Width="27" Fill="#FF66F8F9"/>

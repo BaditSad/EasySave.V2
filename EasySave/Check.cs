@@ -74,11 +74,6 @@ namespace EasySave
                 lang.WriteLine(Values.Instance.Lang);
                 lang.Close();
             }
-            if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Ext.json"))
-            {
-                StreamWriter ext = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Ext.json");
-                ext.Close();
-            }
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\File.json"))
             {
                 Values.Instance.FileExt = ".json";

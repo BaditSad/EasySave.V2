@@ -27,7 +27,7 @@ namespace EasySave
             }
             else
             {
-                StreamWriter decrypt = new StreamWriter(Values.Instance.PathConfig + "\\CryptoSoft\\Path.json");
+                StreamWriter decrypt = new StreamWriter(Values.Instance.PathConfig + "\\CryptoSoft\\PathToCrypt.json");
                 decrypt.WriteLine(path);
                 decrypt.Close();
                 Process[] cname = Process.GetProcessesByName("CryptoSoft");
@@ -44,9 +44,10 @@ namespace EasySave
                 }
                 else
                 {
+                    string pathd = Directory.GetCurrentDirectory();
                     Process process = new Process();
                     process.StartInfo.FileName = "CryptoSoft";
-                    process.StartInfo.Arguments = Values.Instance.PathConfig;
+                    process.StartInfo.Arguments = pathd;
                     process.Start();
                 }
             }
