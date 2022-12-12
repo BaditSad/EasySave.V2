@@ -60,15 +60,16 @@ namespace CryptoSoft
             {
                 string a = i.Name;
                 string b = i.Extension;
-                var check = Array.Exists(extension, x => x == b);
-
-                if (check == true)
+                foreach (var items in list.ExtListDo())
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.Write("- ");
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.WriteLine(a);
-                    nFiles++;
+                    if (b == items.ToString())
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("- ");
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine(a);
+                        nFiles++;
+                    }
                 }
                 /*else if (check == false)
                 {
@@ -99,20 +100,20 @@ namespace CryptoSoft
             {
                 string a = i.Name;
                 string b = i.Extension;
-                var check = Array.Exists(extension, x => x == b);
-
-                if (check == true)
+                foreach (var items in list.ExtListDo())
                 {
-                    step.print6(Values.Instance.Lang, a, nFile, nFiles);
-                    var process = new Crypt();
-                    process.Xor(Values.Instance.PathToCrypt + a, a, Values.Instance.Lang);
-                    nFile++;
+                    if (b == items.ToString())
+                    {
+                        step.print6(Values.Instance.Lang, a, nFile, nFiles);
+                        var process = new Crypt();
+                        process.Xor(Values.Instance.PathToCrypt + a, a, Values.Instance.Lang);
+                        nFile++;
+                    }
                 }
             }
 
             step.print8(Values.Instance.Lang, Values.Instance.PathToCrypt);
             step.print9(Values.Instance.Lang);
-            return 1;
         }
     }
 }
