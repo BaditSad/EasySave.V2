@@ -98,6 +98,11 @@
                 <ImageBrush ImageSource="/Interface/pictures/DecryptTitle.png"/>
             </Button.Background>
         </Button>
-
+        <Button Name="ConnectOffButton" IsEnabled="True" Opacity="0.9" Style="{StaticResource defaultButtonStyle}" Content="" HorizontalAlignment="Left" Margin="101,18,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Width="20" Click="ConnectOff_Click" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/Interface/pictures/wifion.png"/>
+            </Button.Background>
+        </Button>
+        <Label Name="StatusConnexion" Content=": Disconnected" HorizontalAlignment="Left" Margin="121,14,0,0" VerticalAlignment="Top" Width="136" Foreground="Red"/>
     </Grid>
 </Window>

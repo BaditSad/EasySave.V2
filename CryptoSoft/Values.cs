@@ -1,34 +1,30 @@
 using System;
-using System.IO;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CryptoSoft
 {
-    class Values
+    internal class Values
     {
-        public class ExtList
+        public string EasySavePath
         {
-            public string Ext
-            {
-                get; set;
-            }
+            get; set;
         }
-        public List<ExtList> ExtListDo(string ExtLinesFile)
+        public string Lang
         {
-            var nonEmptyLines = File.ReadAllLines(ExtLinesFile)
-                        .Where(x => !x.Split(';')
-                                     .Take(2)
-                                     .Any(cell => string.IsNullOrWhiteSpace(cell))
-                         ).ToList();
-
-            File.WriteAllLines(ExtLinesFile, nonEmptyLines);
-            var query = from l in File.ReadLines(ExtLinesFile)
-                        let data = l.Split(';')
-                        select new ExtList
-                        {
-                            Ext = data[0],
-                        };
-            return query.ToList();
+            get; set;
         }
+        public string ExtValues
+        {
+            get; set;
+        }
+        public string PathToCrypt
+        {
+            get; set;
+        }
+        private Values() { }
+        public static readonly Values Instance = new Values();
     }
 }

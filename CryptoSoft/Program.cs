@@ -7,17 +7,19 @@ namespace CryptoSoft
     class Program
     {
         //int Main
-        static void Main(string[] arg_PathExt, string[] arg_PathFolder, string[] arg_lang)
+        static void Main(string[] args)
         {
-            //string lang = "";
-            Values getExt = new Values();
-
+            Values.Instance.EasySavePath = args[0];
+            Values.Instance.Lang = Values.Instance.EasySavePath + "\\Config\\Lang.json";
+            Values.Instance.ExtValues = Values.Instance.EasySavePath + "\\CryptoSoft\\Ext.json";
+            Values.Instance.PathToCrypt = Values.Instance.EasySavePath + "\\CryptoSoft\\PathToCrypt.json";
+            List list = new List();
             string choiceS = "";
             string choiceR = "";
             int nFiles = 0;
             int nFile = 1;
 
-            DirectoryInfo place = new DirectoryInfo(args[0]);
+            DirectoryInfo place = new DirectoryInfo(Values.Instance.PathToCrypt);
             FileInfo[] Files = place.GetFiles();
 
             var banner = new Banner();
@@ -27,17 +29,17 @@ namespace CryptoSoft
 
             //Print extension from json
 
-            step.print0(lang);
+            step.print0(Values.Instance.Lang);
 
-            foreach (string i in extension)
+            foreach (var items in list.ExtListDo())
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("- ");
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                Console.WriteLine(i);
+                Console.WriteLine(items);
             }
 
-            step.print1(lang);
+            step.print1(Values.Instance.Lang);
             choiceS = Console.ReadLine();
 
             if (choiceS == "n" | choiceS == "N")
@@ -52,7 +54,7 @@ namespace CryptoSoft
             }
 
             //Print files from folder where extension.file == extension.json
-            step.print2(lang, args[0]);
+            step.print2(Values.Instance.Lang, Values.Instance.PathToCrypt);
 
             foreach (FileInfo i in Files)
             {
@@ -76,7 +78,7 @@ namespace CryptoSoft
                 }*/
             }
 
-            step.print4(lang);
+            step.print4(Values.Instance.Lang);
             choiceR = Console.ReadLine();
 
             if (choiceR == "n" | choiceR == "N")
@@ -91,7 +93,7 @@ namespace CryptoSoft
             }
 
             //start process foreach files
-            step.print5(lang);
+            step.print5(Values.Instance.Lang);
 
             foreach (FileInfo i in Files)
             {
@@ -101,15 +103,15 @@ namespace CryptoSoft
 
                 if (check == true)
                 {
-                    step.print6(lang, a, nFile, nFiles);
+                    step.print6(Values.Instance.Lang, a, nFile, nFiles);
                     var process = new Crypt();
-                    process.Xor(args[0] + a, a, lang);
+                    process.Xor(Values.Instance.PathToCrypt + a, a, Values.Instance.Lang);
                     nFile++;
                 }
             }
 
-            step.print8(lang, args[0]);
-            step.print9(lang);
+            step.print8(Values.Instance.Lang, Values.Instance.PathToCrypt);
+            step.print9(Values.Instance.Lang);
             return 1;
         }
     }

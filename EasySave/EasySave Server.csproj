@@ -67,6 +67,8 @@
     <None Remove="Interface\pictures\TERMINAL_LOGS.png" />
     <None Remove="Interface\pictures\trash.png" />
     <None Remove="Interface\pictures\VOIR_SAUVEGARDE.png" />
+    <None Remove="Interface\pictures\wifioff.png" />
+    <None Remove="Interface\pictures\wifion.png" />
     <None Remove="Interface\pictures\équipe.png" />
     <None Remove="minim white.png" />
     <None Remove="minimize white.png" />
@@ -148,6 +150,8 @@
     <Resource Include="Interface\pictures\trash.png" />
     <Resource Include="Interface\pictures\united-kingdom.png" />
     <Resource Include="Interface\pictures\VOIR_SAUVEGARDE.png" />
+    <Resource Include="Interface\pictures\wifioff.png" />
+    <Resource Include="Interface\pictures\wifion.png" />
     <Resource Include="Interface\pictures\équipe.png" />
   </ItemGroup>
 

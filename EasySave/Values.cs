@@ -20,7 +20,11 @@ namespace EasySave
         {
             get; set;
         }
-        public string FileExt //Target path folder
+        public string FileExt
+        {
+            get; set;
+        }
+        public bool Connected
         {
             get; set;
         }

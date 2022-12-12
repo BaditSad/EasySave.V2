@@ -31,6 +31,7 @@ namespace EasySave
             //{
             //    this.Close();
             //}
+
             Check method = new Check();
             method.ChekFolder();
             if (Values.Instance.Lang == "en")
@@ -45,6 +46,16 @@ namespace EasySave
                 {
                     ShowSaveButton.IsEnabled = true;
                     ShowSaveButton.Opacity = 1;
+                }
+                if (Values.Instance.Connected == true)
+                {
+                    StatusConnexion.Content = ": Connected";
+                    StatusConnexion.Foreground = Brushes.Green;
+                }
+                else
+                {
+                    StatusConnexion.Content = ": Disconnected";
+                    StatusConnexion.Foreground = Brushes.Red;
                 }
             }
             else if (Values.Instance.Lang == "fr")
@@ -137,6 +148,27 @@ namespace EasySave
             window.Left = this.Left;
             window.Show();
             this.Close();
+        }
+
+        private void ConnectOff_Click(object sender, RoutedEventArgs e)
+        {
+            ServerConnect connect = new ServerConnect();
+            if (connect.ServerConnectMain() == true)
+            {
+                StatusConnexion.Content = ": Connected";
+                StatusConnexion.Foreground = Brushes.Green;
+                Values.Instance.Connected = true;
+            }
+        }
+        private void ConnectOn_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Stop connection ?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                //Stop connection
+                StatusConnexion.Content = ": Disconnected";
+                StatusConnexion.Foreground = Brushes.Red;
+                Values.Instance.Connected = false;
+            }
         }
     }
 }

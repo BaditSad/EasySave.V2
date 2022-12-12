@@ -36,6 +36,11 @@ namespace EasySave
                 StreamWriter crypt = new StreamWriter(Values.Instance.PathConfig + "\\CryptoSoft\\Ext.json");
                 crypt.Close();
             }
+            if (!File.Exists(Values.Instance.PathConfig + "\\CryptoSoft\\PathToCrypt.json"))
+            {
+                StreamWriter crypt = new StreamWriter(Values.Instance.PathConfig + "\\CryptoSoft\\PathToCrypt.json");
+                crypt.Close();
+            }
             if (!File.Exists(Values.Instance.PathConfig + "\\Config\\Save.csv"))
             {
                 StreamWriter save = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Save.csv");
