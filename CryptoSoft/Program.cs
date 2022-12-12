@@ -12,43 +12,52 @@ namespace CryptoSoft
             //string lang = "";
             Values getExt = new Values();
 
-            int T = 0; 
-
-            DirectoryInfo place = new DirectoryInfo(arg_PathFolder[0]);
+            DirectoryInfo place = new DirectoryInfo(args[0]);
             FileInfo[] Files = place.GetFiles();
 
             var banner = new Banner();
             banner.CryptoSoftBanner();
 
-            Console.WriteLine("\nExtension selected:\n");
-            foreach (object item in getExt.ExtListDo(arg_PathExt[0]))
+            Console.WriteLine(("").PadRight(63, '=')); ;
+
+            //Print extension from json
+
+            Console.WriteLine("\nExtension in EasySave configuration's file:\n");
+
+            foreach (string i in extension)
             {
-                Console.WriteLine("- " + item);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("- ");
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine(i);
             }
 
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\r___________________________________________________________________");
-            Console.WriteLine("\nFiles about to get crypt from the selected folder, " + arg_PathFolder[0] + ":\n");
-            foreach (FileInfo i in Files)
+            Console.WriteLine("\nDo you want to continue [Y/N]?");
+            Console.WriteLine("\nNote: add and remove extension from EasySave.");
+
+            string choiceS = "";
+            choiceS = Console.ReadLine();
+            if (choiceS == "n" | choiceS == "N")
             {
-                string a = i.Name;
-                string b = i.Extension;
-                var check = Array.Exists(/*Extension*\, x => x == b);
-
-                if (check == true)
-                {   
-                    Console.WriteLine("- " + a);
-                }
+                return;
             }
-            
-            Console.WriteLine("\nDo you want to run the process ? (y/n)");
-            string test = Console.ReadLine();
+            if (choiceS == "y" & choiceS == "Y")
+            {
+                Console.Clear();
+                return;
+            }
 
+            Console.WriteLine();
+            Console.WriteLine(("").PadRight(63, '=')); ;
 
-            Console.ReadLine();
+            //Print files from folder where extension.file == extension.json
 
-            Console.WriteLine("\r___________________________________________________________________");
-            Console.WriteLine("\nDon't shutdown the application until the end of the procedure!\n");
+            Console.Write("\nFiles about to get run by the process from: ");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine(args[0] + ":\n");
+
+            int nFiles = 0;
 
             foreach (FileInfo i in Files)
             {
@@ -58,14 +67,71 @@ namespace CryptoSoft
 
                 if (check == true)
                 {
-                    Console.WriteLine("File: " + a + " being crypt");
-                    var process = new Crypt();
-                    process.Xor(arg_PathFolder[0] + a);
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("- ");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine(a);
+                    nFiles++;
                 }
+                /*else if (check == false)
+                {
+                    Console.WriteLine("\nNo file found with the selected extension! Application terminate in 5s!");
+                    Thread.Sleep(5000);
+                    Console.Clear();
+                }*/
             }
-            Console.WriteLine("\r___________________________________________________________________");
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\nDo you want to run the process [Y/N]?");
+
+            string choiceR = "";
+            choiceR = Console.ReadLine();
+            if (choiceR == "n" | choiceR == "N")
+            {
+                return;
+            }
+            if (choiceR == "y" & choiceR == "Y")
+            {
+                Console.Clear();
+                return;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine(("").PadRight(63, '='));
+
+            //start process foreach files
+
+            Console.WriteLine("\nWarning: don't shutdown the application until the end of process!\n");
+            
+            int nFile = 1;
+
+            foreach (FileInfo i in Files)
+            {
+                string a = i.Name;
+                string b = i.Extension;
+                var check = Array.Exists(extension, x => x == b);
+
+                if (check == true)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("[" + nFile + "/" + nFiles + "] Start process on: ");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(a);
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("...");
+                    var process = new Crypt();
+                    process.Xor(args[0] + a, a);
+                    nFile++;
+                }  
+            }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("\nAll process executed! Files should be in: ");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine(args[0] + "\n");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(("").PadRight(63, '=')); ;
             Console.WriteLine("\nPress enter to close the application.");
-            Console.WriteLine("\n T = " + T);
             Console.Read();
         }
     }
