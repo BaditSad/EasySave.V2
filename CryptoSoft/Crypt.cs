@@ -53,6 +53,7 @@ namespace CryptoSoft
                 
                 TimeSpan ts = stopWatch.Elapsed;
                 int time = ts.Milliseconds;
+                time = Math.Abs(time);
 
                 step.print73(lang, time);
                 return time;

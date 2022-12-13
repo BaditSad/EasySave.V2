@@ -40,6 +40,7 @@ namespace Server
                         data = data + "\\Statelog\\Statelog.json";
                         StreamReader read = new StreamReader(data, Encoding.UTF8);
                         byte[] message = Encoding.ASCII.GetBytes(read.ReadToEnd());
+                        read.Close();
                         _ = await clientSocket.SendAsync(message, SocketFlags.None);
                         Thread.Sleep(5000);
                     }

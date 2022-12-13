@@ -24,10 +24,10 @@ namespace EasySave
         {
             int Id = File.ReadAllLines(Values.Instance.PathConfig + "\\Dailylog\\Log.json").Count();
             StreamWriter log_json = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.json", true);
-            log_json.Write("\nID : " + Id + " | Time : " + (stop - start) + "ms | " + source + " => " + target);
+            log_json.Write("\nID : " + Id + " | Time : " + Math.Abs(stop - start) + "ms | " + source + " => " + target);
             log_json.Close();
             StreamWriter log_xml = new StreamWriter(Values.Instance.PathConfig + "\\Dailylog\\Log.xml", true);
-            log_xml.Write("\nID : " + Id + " | Time : " + (stop - start) + "ms | " + source + " => " + target);
+            log_xml.Write("\nID : " + Id + " | Time : " + Math.Abs(stop - start) + "ms | " + source + " => " + target);
             log_xml.Close();
         }
         public void SavePause()
