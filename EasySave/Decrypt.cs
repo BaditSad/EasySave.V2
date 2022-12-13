@@ -44,10 +44,27 @@ namespace EasySave
                 }
                 else
                 {
-                    Process process = new Process();
-                    process.StartInfo.FileName = "CryptoSoft";
-                    process.StartInfo.Arguments = Values.Instance.PathConfig;
-                    process.Start();
+                    StreamReader read = new StreamReader(Values.Instance.PathConfig + "\\CryptoSoft\\Ext.json");
+                    string readFile = read.ReadToEnd();
+                    read.Close();
+                    if (readFile == "")
+                    {
+                        if (Values.Instance.Lang == "en")
+                        {
+                            MessageBox.Show("Extension file empty !", "CryptoSoft", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                        else if (Values.Instance.Lang == "fr")
+                        {
+                            MessageBox.Show("Fichier extension vide !", "CryptoSoft", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                    else
+                    {
+                        Process process = new Process();
+                        process.StartInfo.FileName = "CryptoSoft";
+                        process.StartInfo.Arguments = Values.Instance.PathConfig;
+                        process.Start();
+                    }
                 }
             }
         }
