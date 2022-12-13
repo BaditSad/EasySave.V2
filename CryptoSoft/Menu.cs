@@ -170,12 +170,12 @@ namespace CryptoSoft
         {
             if (lang == "en")
             {
-                Console.Write("\r        Process running on: " + file + " [{0}%]   ", k);
+                Console.Write("\r       Process running on: " + file + " [{0}%]   ", k);
             }
 
             if (lang == "fr")
             {
-                Console.Write("\r        Processus s'execute sur : " + file + " [{0}%]   ", k);
+                Console.Write("\r       Processus s'execute sur : " + file + " [{0}%]   ", k);
             }
         }
 
@@ -185,12 +185,12 @@ namespace CryptoSoft
 
             if (lang == "en")
             {
-                Console.Write("\r        Process running on: " + file + " [{0}]   ", "Done");
+                Console.Write("\r       Process running on: " + file + " [{0}]   ", "Done");
             }
 
             if (lang == "fr")
             {
-                Console.Write("\r        Processus s'execute sur : " + file + " [{0}]   ", "Done");
+                Console.Write("\r       Processus s'execute sur : " + file + " [{0}]   ", "Done");
             }
         }
 
@@ -198,12 +198,12 @@ namespace CryptoSoft
         {
             if (lang == "en")
             {
-                Console.WriteLine("\n        Process successful! Duration " + time + "ms!\n");
+                Console.WriteLine("\n       Process successful! Duration " + time + "ms!\n");
             }
 
             if (lang == "fr")
             {
-                Console.WriteLine("\n        Processus terminé! Durée " + time + "ms!\n");
+                Console.WriteLine("\n       Processus terminé! Durée " + time + "ms!\n");
             }
         }
 
@@ -213,14 +213,14 @@ namespace CryptoSoft
 
             if (lang == "en")
             {
-                Console.WriteLine("\r        Process running on: " + file + " [Error]");
-                Console.WriteLine("\r        Error during process! Process aborted! \n");
+                Console.WriteLine("\r       Process running on: " + file + " [Error]");
+                Console.WriteLine("\r       Error during process! Process aborted! \n");
             }
 
             if (lang == "fr")
             {
-                Console.WriteLine("\r        Processus en cours: " + file + " [Error]");
-                Console.WriteLine("\r        Erreur during le processus ! \n");
+                Console.WriteLine("\r       Processus en cours: " + file + " [Error]");
+                Console.WriteLine("\r       Erreur during le processus ! \n");
             }
         }
 

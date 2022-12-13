@@ -53,7 +53,6 @@ namespace CryptoSoft
 
             if (choiceS == "y" & choiceS == "Y")
             {
-                Console.Clear();
                 return 1;
             }
 
@@ -69,14 +68,16 @@ namespace CryptoSoft
                     if (b == items.ToString())
                     {
                         step.print21(a);
+                        B = 1;
                         nFiles++;
                     }
-                }
-                /*if (B == false)
-                {
-                    step.print3(Values.Instance.Lang);
-                    return -1;
-                }*/
+                }              
+            }
+            
+            if (B == false)
+            {
+                step.print3(Values.Instance.Lang);
+                return -1;
             }
 
             step.print4(Values.Instance.Lang);
@@ -114,7 +115,7 @@ namespace CryptoSoft
                         }
 
                         var process = new Crypt();
-                        process.Xor(Values.Instance.PathToCrypt + a, a, Values.Instance.Lang);
+                        process.Xor(Values.Instance.PathToCrypt + "\\" + a, a, Values.Instance.Lang);
                         nFile++;
                     }
                 }
