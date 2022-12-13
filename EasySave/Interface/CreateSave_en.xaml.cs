@@ -18,11 +18,12 @@ using System.Windows.Shapes;
 
 namespace EasySave
 {
-    /// <summary>
-    /// Logique d'interaction pour CreateSave.xaml
-    /// </summary>
+
     public partial class CreateSave_en : Window
     {
+
+        //Creste Save Menu EN
+
         public CreateSave_en()
         {
             InitializeComponent();
