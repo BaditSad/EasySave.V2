@@ -68,7 +68,7 @@ namespace CryptoSoft
                     if (b == items.ToString())
                     {
                         step.print21(a);
-                        B = 1;
+                        B = true;
                         nFiles++;
                     }
                 }              
