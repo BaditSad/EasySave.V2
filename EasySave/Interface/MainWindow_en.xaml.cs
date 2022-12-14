@@ -26,11 +26,11 @@ namespace EasySave
     {
         public MainWindow_en()
         {
-            //Process[] cname = Process.GetProcessesByName("EasySave");
-            //if (cname.Count != 0)
-            //{
-            //    this.Close();
-            //}
+            Process[] cname = Process.GetProcessesByName("EasySave");
+            if (cname.Length > 1)
+            {
+                System.Windows.Application.Current.Shutdown();
+            }
 
             Check method = new Check();
             method.ChekFolder();
