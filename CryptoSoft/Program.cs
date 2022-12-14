@@ -26,9 +26,13 @@ namespace CryptoSoft
             int nFile = 1;
             bool B = false;
 
+            //Get all files from the selected folder
+            
             DirectoryInfo place = new DirectoryInfo(Values.Instance.PathToCrypt);
             FileInfo[] Files = place.GetFiles();
 
+            //Banner
+            
             var banner = new Banner();
             banner.CryptoSoftBanner();
 
@@ -38,6 +42,8 @@ namespace CryptoSoft
 
             step.print0(Values.Instance.Lang);
 
+            //Print all extension wrote in Ext.json
+            
             foreach (var items in list)
             {
                 step.print01(items.ToString());
@@ -45,20 +51,23 @@ namespace CryptoSoft
 
             step.print1(Values.Instance.Lang);
             choiceS = Console.ReadLine();
+            
+            //Press n to shutdown the console
 
             if (choiceS == "n" | choiceS == "N")
             {
                 return -1;
             }
-
-            if (choiceS == "y" & choiceS == "Y")
+   
+            /*if (choiceS == "y" & choiceS == "Y")
             {
                 return 1;
-            }
-
-            //Print files from folder where extension.file == extension.json
+            }*/
+            
             step.print2(Values.Instance.Lang, Values.Instance.PathToCrypt);
 
+            //Print files where extension file == extension wrote in Ext.json
+            
             foreach (FileInfo i in Files)
             {
                 string a = i.Name;
@@ -74,6 +83,8 @@ namespace CryptoSoft
                 }              
             }
             
+            //If for all files extension file !== extension wrote in Ext.json then shutdown the console
+            
             if (B == false)
             {
                 step.print3(Values.Instance.Lang);
@@ -88,12 +99,13 @@ namespace CryptoSoft
                 return -1;
             }
 
-            if (choiceR == "y" & choiceR == "Y")
+            /*if (choiceR == "y" & choiceR == "Y")
             {
                 return 1;
-            }
+            }*/
 
             //start process foreach files
+            
             step.print5(Values.Instance.Lang);
 
             foreach (FileInfo i in Files)
