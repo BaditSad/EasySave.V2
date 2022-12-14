@@ -4,6 +4,9 @@ using System.Threading;
 namespace CryptoSoft
 {
     class Menu
+        
+    //All methods to build the interface depending on the selected language
+        
     {
         public void print0(string lang)
         {
