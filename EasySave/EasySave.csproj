@@ -92,6 +92,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CryptoSoft\CryptoSoft.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Interface\pictures\ADDTOLIST.png" />
     <Resource Include="Interface\pictures\AJOUTERALALISTE.png" />
     <Resource Include="Interface\pictures\BACK.png" />
