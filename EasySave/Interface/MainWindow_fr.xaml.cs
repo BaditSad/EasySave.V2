@@ -116,6 +116,9 @@ namespace EasySave
 
         private void Crypt_Click(object sender, RoutedEventArgs e)
         {
+            StreamWriter lang = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Lang.json");
+            lang.WriteLine("fr");
+            lang.Close();
             Crypt_fr window = new Crypt_fr();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -125,6 +128,9 @@ namespace EasySave
 
         private void Decrypt_Click(object sender, RoutedEventArgs e)
         {
+            StreamWriter lang = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Lang.json");
+            lang.WriteLine("fr");
+            lang.Close();
             Decrypt_fr window = new Decrypt_fr();
             window.Top = this.Top;
             window.Left = this.Left;

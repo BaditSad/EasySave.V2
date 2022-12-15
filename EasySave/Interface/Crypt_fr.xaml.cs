@@ -1,6 +1,7 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,9 @@ namespace EasySave
         }
         private void English_Click(object sender, RoutedEventArgs e)
         {
+            StreamWriter lang = new StreamWriter(Values.Instance.PathConfig + "\\Config\\Lang.json");
+            lang.WriteLine("en");
+            lang.Close();
             Crypt_en window = new Crypt_en();
             window.Top = this.Top;
             window.Left = this.Left;
