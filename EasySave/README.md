@@ -14,3 +14,4 @@ Chiffrer et déchiffrer permettent chacun de chiffrer ou déchiffrer un fichier 
 
 Un menu option est aussi proposé dans lequel l'utilisateur peut modifier le chemin cible par défaut ainsi que le type de fichier logs (xml ou Json).
 Il est aussi possible de sélectionner la langue entre français et anglais dans le coin supérieur gauche de l'application.
+Une release note mise à jour en temps réel est disponible à cette adresse : https://easysaveproject.releasenotes.io/
